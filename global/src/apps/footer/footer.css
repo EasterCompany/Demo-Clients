@@ -1,0 +1,10 @@
+
+#footer {
+    display: flex;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    min-height: 32px;
+    filter: drop-shadow(5px 5px 5px black);
+}

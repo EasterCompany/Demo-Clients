@@ -1,0 +1,79 @@
+
+#user-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2% 2% 2% 2%;
+  width: 60vmin;
+  height: 60vmin;
+  min-width: 320px;
+  min-height: 460px;
+  border-radius: 2%;
+  border: 1px solid darkgrey;
+}
+
+#user-id {
+  color: #61dafb;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+}
+
+.user-img {
+  height: 192px;
+  width: 192px;
+  min-height: 32px;
+  min-width: 32px;
+
+  filter: drop-shadow(6px 6px 6px black);
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  animation: 'spin';
+  animation-duration: 1;
+  animation-iteration-count: infinite;
+}
+
+.user-img-large {
+  position: absolute;
+  height: 95vh;
+  width: 75vh;
+  min-height: 32px;
+  min-width: 32px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  padding: 0 25vmin 0 25vmin;
+
+  filter: drop-shadow(1px 1px 100vmin black);
+  border-radius: 0%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#user-next {
+  width: 20vmin;
+  height: 5vmin;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  background-color: #87a7e7;
+  font-size: calc(6px + 2vmin);
+}
+
+#user-next:active {
+  background-color: #878787
+}
+
+@-moz-keyframes spin {
+  to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  to {transform:rotate(360deg);}
+}
