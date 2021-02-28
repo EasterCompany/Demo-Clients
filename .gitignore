@@ -1,4 +1,12 @@
 
+# Overlord
+/o
+.tools_config/
+
+# Developer Envrionments
+.vscode/
+.idea/
+
 # Node
 node_modules/
 

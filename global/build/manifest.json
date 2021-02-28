@@ -1,6 +1,6 @@
 {
-  "short_name": "EC Portfolio",
-  "name": "Portfolio",
+  "name": "easter-company-portfolio",
+  "short_name": "ECP",
   "icons": [
     {
       "src": "static/favicon.ico",
