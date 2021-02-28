@@ -9,10 +9,10 @@ Some applications may be submodules of this repository however some may be embed
 this repository - for example the `global` client should always be available and deployed.
 
 The demo server is hosted here:
-[eastercompany.eu](https://eastercompany.eu.pythonanywhere.com/seclea), please check it
-out and play around with it yourself.
+[eastercompany.eu](https://eastercompany.eu.pythonanywhere.com/seclea) please check it out
+and play around with it yourself.
 
-Some applications will need to be `--recursive` pulled or specifically pulled in-order
+Some applications will require `--recursive` pull argument or selectively pulled in-order
 to be shown on a local deployment.
 
 ## Application Ports
@@ -24,4 +24,3 @@ below is a list of port numbers and applications associated with them.
 | --------- | ----------------- |
 | 8000      | global            |
 | 8001      | seclea            |
-|           |                   |

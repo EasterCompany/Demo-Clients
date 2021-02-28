@@ -1,6 +1,6 @@
 {
-  "short_name": "seclea-assignment",
-  "name": "seclea",
+  "name": "seclea-react-assignment",
+  "short_name": "seclea",
   "icons": [
     {
       "src": "static/seclea/favicon.ico",
@@ -8,12 +8,12 @@
       "type": "image/x-icon"
     },
     {
-      "src": "static/seclea/logo192.png",
+      "src": "static/seclea/media/logo192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "static/seclea/logo512.png",
+      "src": "static/seclea/media/logo512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
