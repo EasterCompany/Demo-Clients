@@ -1,16 +1,20 @@
 
 # Overlord
 /o
-.tools_config/
+*.key
+config/clients.json
+
+# Sqlite
+*.sqlite3
+
+# Python
+.pytest_cache/
+__pycache__/
+
+# Node
+.eslintcache
+node_modules/
 
 # Developer Envrionments
 .vscode/
 .idea/
-
-# Node
-node_modules/
-
-# Production Builds - force push for releases #
-global/build/
-seclea/build/
-# ------------------------------------------- #
