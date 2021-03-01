@@ -1,0 +1,3 @@
+[submodule "donation"]
+	path = donation
+	url = git@github.com:oceaster/DoNation-App.git
