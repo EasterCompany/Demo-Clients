@@ -8,8 +8,8 @@ import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 // APPLICATION IMPORTS
 import './index.css';
-import Header from './apps/header/header';
-import Footer from './apps/footer/footer';
+import Header from './components/header/header';
+import Footer from './components/footer/footer';
 import Browser from './apps/browser/browser';
 
 // INDEX
@@ -23,7 +23,7 @@ ReactDOM.render(
 );
 
 // SERVICE WORKER
-serviceWorkerRegistration.unregister();
+serviceWorkerRegistration.register();
 
 // WEB VITALS
 reportWebVitals();
