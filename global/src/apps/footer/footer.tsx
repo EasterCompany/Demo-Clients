@@ -2,7 +2,7 @@ import './footer.css';
 
 const Footer = () => {
   return <div id='footer'>
-    <h6> Easter Company © 2021 </h6>
+    <p> Easter Company © 2021 </p>
   </div>
 }
 
