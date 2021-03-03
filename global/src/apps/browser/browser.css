@@ -7,15 +7,14 @@
     justify-content: space-evenly;
     overflow-y: auto;
     width: 96%;
-    padding: 2% 2% 2% 2%;
-    min-height: fit-content;
-    height: calc(80vh - 68px);
+    padding: 0 2%  0 2%;
+    height: 80vh;
 }
 
 .browser-app-container {
     width: 200px;
     height: 250px;
-    margin: 1% 1% calc(28px + 3%) 1%;
+    margin: 1.5% 1% calc(28px + 1.5%) 1%;
     transition: all .2s ease-in-out;
     filter: drop-shadow(1px 1px 3px rgba(225,255,255,.1));
 }
