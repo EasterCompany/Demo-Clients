@@ -1,3 +1,6 @@
 [submodule "donation"]
 	path = donation
 	url = git@github.com:oceaster/DoNation-App.git
+[submodule "inverair"]
+	path = inverair
+	url = git@github.com:EasterCompany/InverAir-App.git

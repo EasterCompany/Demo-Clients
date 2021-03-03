@@ -5,6 +5,6 @@
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
-    min-height: 32px;
     filter: drop-shadow(5px 5px 5px black);
+    font-size: 12px;
 }
