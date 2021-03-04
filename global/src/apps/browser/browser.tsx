@@ -20,9 +20,9 @@ const App = (app: any) => {
 
 const Browser = () => {
   return <div id='browser'>
-    <App link='seclea' title='Seclea' image={secleaLogo} />
-    <App link='inverair' title='Inverair' image={inverairLogo} />
-    <App link='donation' title='DoNation' image={donationLogo} />
+    <App link='seclea.app' title='Seclea' image={secleaLogo} />
+    <App link='inverair.app' title='Inverair' image={inverairLogo} />
+    <App link='donation.app' title='DoNation' image={donationLogo} />
     <App
       link='https://github.com/EasterCompany/Overlord-Tools'
       title='Tools' image={toolsLogo}
