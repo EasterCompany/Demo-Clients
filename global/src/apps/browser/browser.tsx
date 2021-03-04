@@ -1,8 +1,11 @@
 import './browser.css';
+import echatLogo from '../../assets/images/echat.jpg';
 import toolsLogo from '../../assets/images/tools.jpg';
 import secleaLogo from '../../assets/images/seclea.jpg';
+import journalLogo from '../../assets/images/journal.jpg';
 import donationLogo from '../../assets/images/donation.jpg';
 import inverairLogo from '../../assets/images/inverair.jpg';
+import ecuisineLogo from '../../assets/images/ecuisine.jpg';
 
 const App = (app: any) => {
   return <div className='browser-app-container'>
@@ -27,6 +30,9 @@ const Browser = () => {
       link='https://github.com/EasterCompany/Overlord-Tools'
       title='Tools' image={toolsLogo}
     />
+    <App link='chat.app' title='eChat' image={echatLogo} />
+    <App link='journal.app' title='Journal' image={journalLogo} />
+    <App link='cuisine.app' title='eCuisine' image={ecuisineLogo} />
   </div>
 }
 
