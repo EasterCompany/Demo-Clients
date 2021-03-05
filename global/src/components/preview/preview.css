@@ -1,0 +1,119 @@
+
+.browser-app-section {
+    z-index: 1;
+    width: fit-content;
+    height: fit-content;
+    margin: calc(14px + 1.5%) 1% calc(14px + .5%) 1%;
+}
+
+.browser-app-section:hover {
+    z-index: 2;
+}
+
+.browser-app-container {
+    user-select: none;
+    cursor: pointer;
+    width: 200px;
+    height: 250px;
+    transition: all .2s ease-in-out;
+    filter: drop-shadow(1px 1px 3px rgba(225,255,255,.1));
+}
+
+.browser-app-container:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(5px 5px 8px black);
+}
+
+.browser-app-image {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.browser-app-title {
+    margin: 0 0 0 0;
+    min-width: 200px;
+    font-size: 24px;
+    background-color: rgba(55,55,55,1);
+}
+
+.browser-app-bio {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(5,5,5,.5);
+}
+
+.browser-app-bio-content {
+    display: block;
+    position: fixed;
+    top: 5vh;
+    left: 5vw;
+    z-index: 11;
+    width: 90vw;
+    height: 90vh;
+    border-radius: 5px;
+    background-color: rgba(55,55,55,1);
+}
+
+.browser-app-bio-image {
+    width: 100%;
+    height: 50%;
+    max-height: 250px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    background-size: contain;
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.browser-app-bio-close {
+    position: absolute;
+    z-index: 12;
+    width: 10vw;
+    height: 10vw;
+    max-width: 80px;
+    max-height: 80px;
+    margin: 2% 2% 2% 2%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.browser-app-bio-desc {
+    width: 60vw;
+    height: calc(60vh - 278px);
+    min-height: 150px;
+    font-size: calc(12px + 1.5vmin);
+    padding: 2% 2% 2% 2%;
+    margin: 16px auto 16px auto;
+    overflow: auto;
+}
+
+.browser-app-bio-content h1 {
+    font-size: calc(18px + 2vmin);
+}
+
+.browser-app-bio-content button {
+    min-width: 20%;
+    min-height: 10%;
+    border-radius: 5px;
+    color: white;
+    font-size: calc(12px + 2vmin);
+    margin: 0 5% 0 5%;
+}
+
+.browser-app-launch {
+    background-color: rgb(73, 100, 175);
+}
+
+.browser-app-source {
+    background-color: rgb(168, 98, 98);
+}
