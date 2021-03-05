@@ -8,10 +8,12 @@
     height: 8vh;
     background-color: #1e2025;
     padding: 3vh 0 3vh 0;
+    pointer-events: none;
+    user-select: none;
 }
 
 h1 {
-    font-size: calc(9px + 3vmin);
+    font-size: calc(14px + 1.5vmin);
     margin: unset;
 }
 

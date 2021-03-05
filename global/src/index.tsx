@@ -1,6 +1,6 @@
 // NODE MODULE IMPORTS
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { hydrate, render } from "react-dom";
 
 // LOCAL REQUIREMENTS
 import reportWebVitals from './reportWebVitals';
@@ -12,15 +12,23 @@ import Header from './components/header/header';
 import Footer from './components/footer/footer';
 import Browser from './apps/browser/browser';
 
+// SERVER SIDE RENDERING
+const _targetFunc = () => {
+  if (document.getElementById("root")?.hasChildNodes())
+    return hydrate
+  return render
+}
+const targetFunc = _targetFunc()
+
 // INDEX
-ReactDOM.render(
+targetFunc(
   <React.StrictMode>
     <Header />
     <Browser />
     <Footer />
   </React.StrictMode>,
   document.getElementById('root')
-);
+)
 
 // SERVICE WORKER
 serviceWorkerRegistration.register();

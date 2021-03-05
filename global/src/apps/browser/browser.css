@@ -7,35 +7,8 @@
     justify-content: space-evenly;
     overflow-y: auto;
     width: 96%;
+    max-width: 1000px;
+    margin: 0 auto 0 auto;
     padding: 0 2%  0 2%;
     height: 80vh;
-}
-
-.browser-app-container {
-    width: 200px;
-    height: 250px;
-    margin: 1.5% 1% calc(28px + 1.5%) 1%;
-    transition: all .2s ease-in-out;
-    filter: drop-shadow(1px 1px 3px rgba(225,255,255,.1));
-}
-
-.browser-app-container:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(5px 5px 8px black);
-}
-
-.browser-app-image {
-    width: 100%;
-    height: 100%;
-    background-color: black;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-.browser-app-title {
-    margin: 0 0 0 0;
-    min-width: 200px;
-    font-size: 24px;
-    background-color: rgba(55,55,55,.5);
 }

@@ -17,3 +17,29 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Works on Firefox */
+* {
+  scrollbar-width: 10px;
+  scrollbar-color: rgb(66, 66, 66) rgb(33, 33, 33);
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: rgb(33, 33, 33);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(66, 66, 66);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(99, 99, 99);
+}
