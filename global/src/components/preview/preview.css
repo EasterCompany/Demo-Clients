@@ -64,7 +64,7 @@
 
 .browser-app-bio-image {
     width: 100%;
-    height: 50%;
+    height: 30vh;
     max-height: 250px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -77,8 +77,10 @@
 .browser-app-bio-close {
     position: absolute;
     z-index: 12;
-    width: 10vw;
-    height: 10vw;
+    width: 8vmin;
+    height: 8vmin;
+    min-width: 48px;
+    min-height: 48px;
     max-width: 80px;
     max-height: 80px;
     margin: 2% 2% 2% 2%;
@@ -88,13 +90,16 @@
 }
 
 .browser-app-bio-desc {
-    width: 60vw;
-    height: calc(60vh - 278px);
+    width: 85vw;
+    max-width: 800px;
+    height: fit-content;
     min-height: 150px;
+    max-height: (20vh - 278px);
     font-size: calc(12px + 1.5vmin);
-    padding: 2% 2% 2% 2%;
-    margin: 16px auto 16px auto;
+    padding: 0 1% 0 1%;
+    margin: 8px auto 8px auto;
     overflow: auto;
+    border: 1px solid rgba(33,33,33,.3);
 }
 
 .browser-app-bio-content h1 {
@@ -102,18 +107,59 @@
 }
 
 .browser-app-bio-content button {
-    min-width: 20%;
-    min-height: 10%;
-    border-radius: 5px;
+    min-width: 30vmin;
+    max-width: 300px;
+    min-height: 10vmin;
+    max-height: 100px;
+    border-radius: 50px;
     color: white;
     font-size: calc(12px + 2vmin);
-    margin: 0 5% 0 5%;
+    margin: 8px 5% 8px 5%;
+    outline: none;
+    border: 2px solid rgb(88,88,88);
+}
+
+.browser-app-bio-content button:hover {
+    border: 2px solid rgb(200,200,200);
+}
+
+.browser-app-bio-content button:active {
+    border: 5px solid rgb(200,200,200);
 }
 
 .browser-app-launch {
-    background-color: rgb(73, 100, 175);
+    background-color: rgba(73, 100, 175, .33);
 }
 
 .browser-app-source {
-    background-color: rgb(168, 98, 98);
+    background-color: rgba(168, 98, 98, .33);
+}
+
+@media (max-height: 540px) {
+    .browser-app-bio-desc {
+        display: none;
+    }
+    .browser-app-bio-content button {
+        margin-top: 16px;
+        min-width: 60%;
+        min-height: 20%;
+        margin: 3vh auto;
+    }
+}
+
+@media (max-height: 620px), (max-width: 480px) {
+    .browser-app-bio-content {
+        top: 1vh;
+        left: 1vw;
+        width: 98vw;
+        height: 98vh;
+    }
+    .browser-app-container {
+        width: 130px;
+        height: 165px;
+    }
+    .browser-app-title {
+        min-width: 130px;
+        font-size: 16px;
+    }
 }
