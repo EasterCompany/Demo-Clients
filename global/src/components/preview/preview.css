@@ -37,6 +37,7 @@
     margin: 0 0 0 0;
     min-width: 200px;
     font-size: 24px;
+    margin-bottom: calc(14px + .5%);
     background-color: rgba(55,55,55,1);
 }
 
@@ -120,6 +121,8 @@
 }
 
 .browser-app-bio-content button:hover {
+    transition: all .33s ease-in-out;
+    filter: drop-shadow(2px 2px 6px rgba(225,255,255,.5));
     border: 2px solid rgb(200,200,200);
 }
 
