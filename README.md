@@ -26,3 +26,4 @@ below is a list of port numbers and applications associated with them.
 | 8001      | seclea            |
 | 8002      | donation          |
 | 8003      | inverair          |
+| 8004      | echat             |
