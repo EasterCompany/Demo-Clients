@@ -1,6 +1,6 @@
 {
-  "short_name": "eChat",
-  "name": "eChat",
+  "short_name": "echat",
+  "name": "echat",
   "icons": [
     {
       "src": "/static/echat/favicon.ico",
