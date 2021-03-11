@@ -19,11 +19,19 @@ const Bio = (props: any) => {
         style={{backgroundImage: `url(${closeButton})`}}
         onClick={() => closeBio("none")}
       />
+      <div className="browser-app-bio-bg-bg">
+        <div
+          className="browser-app-bio-bg"
+          style={{backgroundImage: `url(${props.app.image})`}}
+        />
+      </div>
       <div
         className="browser-app-bio-image"
         style={{backgroundImage: `url(${props.app.image})`}}
       />
-      <h1> {props.app.title} </h1>
+      <h1 className="browser-app-bio-title">
+        {props.app.title}
+      </h1>
       <div className="browser-app-bio-desc">
         <p> {props.app.description} </p>
       </div>
