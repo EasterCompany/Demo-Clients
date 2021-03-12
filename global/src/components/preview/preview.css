@@ -75,7 +75,6 @@
     max-height: 250px;
     opacity: 0.75;
     filter: blur(12px);
-    border-radius: 5px;
     background-size: cover;
     background-color: black;
     background-position: center;
@@ -88,8 +87,6 @@
     width: 100%;
     height: 30vh;
     max-height: 250px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
@@ -97,6 +94,7 @@
 }
 
 .browser-app-bio-title {
+    font-size: calc(18px + 3vmin);
     margin-top: 12px;
 }
 
@@ -133,49 +131,46 @@
 }
 
 .browser-app-bio-content button {
-    min-width: 30vmin;
-    max-width: 300px;
-    min-height: 10vmin;
-    max-height: 100px;
-    border-radius: 50px;
-    color: white;
-    font-size: calc(12px + 2vmin);
-    margin: 8px 5% 8px 5%;
+    position: absolute;
+    bottom: 0;
+    width: 50%;
+    height: 20vmin;
+    max-height: 150px;
+    color: rgba(168, 98, 98, .75);
+    font-family: monospace;
+    font-size: calc(16px + 3vmin);
     outline: none;
-    border: 2px solid rgb(88,88,88);
+    border: 1vh solid rgb(88,88,88);
+    border-top: unset !important;
+    border-right: unset !important;
+    border-left: unset !important;
+}
+
+.browser-app-launch {
+    left: 0;
+    background-color: transparent;
+}
+
+.browser-app-source {
+    right: 0;
+    background-color: transparent;
 }
 
 .browser-app-bio-content button:hover {
-    transition: all .33s ease-in-out;
+    transition: all .66s ease-in-out;
+    color: whitesmoke;
     filter: drop-shadow(2px 2px 6px rgba(225,255,255,.5));
-    border: 2px solid rgb(200,200,200);
+    border: 3vh solid rgb(200,200,200);
+    background-image: linear-gradient(
+        to bottom, rgba(0,0,0,0), rgba(155,155,155,.5)
+    ) !important;
 }
 
 .browser-app-bio-content button:active {
     border: 5px solid rgb(200,200,200);
 }
 
-.browser-app-launch {
-    background-color: rgba(73, 100, 175, .33);
-}
-
-.browser-app-source {
-    background-color: rgba(168, 98, 98, .33);
-}
-
-@media (max-height: 540px) {
-    .browser-app-bio-desc {
-        display: none;
-    }
-    .browser-app-bio-content button {
-        margin-top: 16px;
-        min-width: 60%;
-        min-height: 20%;
-        margin: 3vh auto;
-    }
-}
-
-@media (max-height: 620px), (max-width: 480px) {
+@media (max-height: 640px), (max-width: 480px) {
     .browser-app-bio-content {
         top: 1vh;
         left: 1vw;
@@ -189,5 +184,20 @@
     .browser-app-title {
         min-width: 130px;
         font-size: 16px;
+    }
+    .browser-app-bio-desc {
+        display: none;
+    }
+    .browser-app-bio-content button {
+        width: 100%;
+        height: 20%;
+    }
+    .browser-app-launch {
+        color: whitesmoke !important;
+        bottom: 30vh !important;
+    }
+    .browser-app-source {
+        color: whitesmoke !important;
+        bottom: 8vh !important;
     }
 }
