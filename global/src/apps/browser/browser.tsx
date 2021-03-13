@@ -10,6 +10,8 @@ import journalLogo from '../../assets/images/journal.jpg';
 import donationLogo from '../../assets/images/donation.jpg';
 import inverairLogo from '../../assets/images/inverair.jpg';
 import ecuisineLogo from '../../assets/images/ecuisine.jpg';
+import forensicLogo from '../../assets/images/forensic.jpg';
+
 
 const Browser = () => {
   return <div id='browser'>
@@ -20,9 +22,9 @@ const Browser = () => {
       source='https://github.com/EasterCompany/Demo-Clients/tree/main/seclea'
       description={`Seclea tasked us with developing a technical test for a
         user browser in React which could pull random user data from an api
-        and then display that data within a container, user images should be
-        able to be viewed in as a thumbnail by default and fullscreen when the
-        user clicks them.`}
+        and then display that data within a container. It was also requested user
+        images should be able to be viewed as a thumbnail by default and fullscreen
+        when after clicking on them - similar to facebook profile images.`}
     />
     <App
       title='Inverair'
@@ -50,7 +52,7 @@ const Browser = () => {
     <App
       title='Tools'
       image={toolsLogo}
-      link='https://github.com/EasterCompany/Overlord-Tools'
+      link='https://github.com/EasterCompany/Overlord-Tools/blob/main/README.md'
       source='https://github.com/EasterCompany/Overlord-Tools'
       description={`Overlord-Tools is one of three open source developer frameworks
         used and developed by Easter Company to streamline our design, development &
@@ -61,8 +63,13 @@ const Browser = () => {
     <App
       title='eChat'
       image={echatLogo}
-      description={`eChat is currently in early stage development and private.
-        check back later for more details.`}
+      link="echat.app"
+      source="https://github.com/EasterCompany/Demo-Clients/tree/main/chat"
+      description={`eChat is an end-to-end encrypted messaging application which uses
+        your Easter Company profile and integrates with all other applications on our
+        platform. eChat aims to have a similar interface to messenger on the web and to
+        function similar to snapchat on mobile. It is a standalone application which
+        was originally scoped to be a feature of the Journal app.`}
     />
     <App
       title='Journal'
@@ -76,7 +83,14 @@ const Browser = () => {
       description={`eCuisine is currently in early stage development and private.
         check back later for more details.`}
     />
+    <App
+      title='Forensic'
+      image={forensicLogo}
+      description={`Forensic is currently in early stage development and private.
+        check back later for more details.`}
+    />
   </div>
 }
+
 
 export default Browser;
