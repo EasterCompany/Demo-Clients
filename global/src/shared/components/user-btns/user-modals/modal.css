@@ -1,0 +1,138 @@
+
+.user-modal {
+  display: none;
+  position: fixed;
+  z-index: 98;
+  top: 0;
+  left: 0;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: rgba(5,5,5,.5);
+}
+
+.modal-close-button {
+  width: 5vh;
+  height: 5vh;
+  top: 2.5vh;
+  left: 2.5vh;
+  padding: 1vh 1vh 1vh 1vh;
+  position: absolute;
+}
+
+.modal-close-button:hover {
+  background-color: rgba(45,45,45,.75);
+  border-radius: 50px;
+}
+
+.user-modal-content {
+  display: none;
+  flex-direction: column;
+  position: fixed;
+  z-index: 99;
+  top: 5vh;
+  left: 5vw;
+  width: 90vw;
+  height: 90vh;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: rgba(55,55,55,1);
+}
+
+.user-modal-content h1 {
+  color: darkgrey;
+  font-size: calc(16px + 1.5vmin);
+  margin: 2.5vh 0 2.5vh 0;
+}
+
+.user-form-container {
+  display: flex;
+  flex-direction: row;
+  min-height: calc(100% - 10vh);
+  overflow: auto;
+}
+
+.user-form {
+  color: darkgrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  min-width: calc(50% - 1.5px);
+  height: 90%;
+}
+
+.user-form input {
+  width: 50%;
+  min-width: 300px;
+  height: 48px;
+  color: rgb(200,200,200);
+  font-size: 28px;
+  padding-left: 8px;
+  outline: none;
+  border: unset;
+  border-radius: 3px;
+  border-bottom: 5px solid rgba(133,55,55,.75);
+  margin-bottom: 5%;
+  background-color: rgb(35,35,35);
+}
+
+.user-form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 48px;
+  font-size: 22px;
+  font-family: monospace;
+  color: rgb(200,200,200);
+  outline: none;
+  border-radius: 15px;
+  border: 2px solid rgba(133,55,55,.75);
+  background-color: rgb(35,35,35);
+}
+
+.user-form img {
+  margin: 0 14px 0 -28px;
+}
+
+.user-form a {
+  color: rgb(60, 93, 131);
+  margin: 32px 0 0 0;
+}
+
+.user-form-divider {
+  min-width: 3px;
+  height: 100%;
+  background-color: rgba(65,65,65,1);
+}
+
+@media (max-height: 640px), (max-width: 480px) {
+  .user-modal-content {
+    top: 1vh;
+    left: 1vw;
+    width: 98vw;
+    height: 98vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .user-form-container {
+    padding-top: 4vh;
+    flex-direction: column-reverse;
+  }
+  .user-form-container h1 {
+    display: none;
+  }
+  .user-form-container a {
+    margin: 16px 0 16px 0;
+  }
+  .user-form-container :is(input, button) {
+    width: 80%;
+  }
+  .user-form-divider {
+    height: 3px;
+    width: 100%;
+    margin: 8px 0 8px 0;
+  }
+}

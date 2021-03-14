@@ -1,0 +1,21 @@
+
+.user-btn {
+  width: 160px;
+  height: 60px;
+  margin: 0 auto;
+  color: rgba(168, 98, 98, .75);
+  font-family: monospace;
+  font-size: 18px;
+  outline: none;
+  border-radius: 15px;
+  border: 0px solid rgba(88,88,88,.25);
+  background-color: transparent;
+}
+
+.user-btn:hover {
+  transition: all .33s ease;
+  border-bottom: 8px solid rgba(133,88,88,.75);
+  background-image: linear-gradient(
+    to top, rgba(155, 155, 155, .25), transparent
+  );
+}
