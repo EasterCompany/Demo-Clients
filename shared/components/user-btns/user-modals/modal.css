@@ -16,6 +16,7 @@
   top: 16px;
   left: 16px;
   cursor: pointer;
+  user-select: none;
   padding: 6px 6px 6px 6px;
   position: absolute;
 }
@@ -44,6 +45,7 @@
 }
 
 .user-modal-content h1 {
+  user-select: none;
   color: lightgrey;
   font-size: calc(16px + 1.5vmin);
   margin: 2.5vh 0 2.5vh 0;
@@ -56,7 +58,7 @@
   overflow: auto;
 }
 
-.user-form {
+.user-form, .user-form-social {
   color: darkgrey;
   display: flex;
   flex-direction: column;
@@ -65,6 +67,10 @@
   justify-content: center;
   min-width: calc(50% - 1.5px);
   height: 90%;
+}
+
+.user-form-social {
+  margin-top: -14px;
 }
 
 .user-form input {
@@ -82,13 +88,16 @@
   background-color: rgb(35,35,35);
 }
 
-.user-form button {
+.user-form button, .user-form-social button {
   display: flex;
   cursor: pointer;
+  user-select: none;
   align-items: center;
   justify-content: center;
   width: 200px;
+  min-width: fit-content;
   height: 48px;
+  min-height: fit-content;
   font-size: 22px;
   font-family: monospace;
   color: rgb(200,200,200);
@@ -113,6 +122,21 @@
   min-width: 3px;
   height: 100%;
   background-color: rgba(65,65,65,1);
+}
+
+.social-login-btn {
+  width: 100% !important;
+  max-width: 345px !important;
+  height: 48px !important;
+  margin-bottom: 16px !important;
+  align-items: left !important;
+  justify-content: left !important;
+}
+
+.social-login-btn img {
+  width: 24px !important;
+  height: 24px !important;
+  margin: 2px 14px 0 14px !important;
 }
 
 @media (max-height: 640px), (max-width: 480px) {
@@ -142,5 +166,12 @@
     height: 3px;
     width: 100%;
     margin: 8px 0 8px 0;
+  }
+  .user-form-social {
+    display: block;
+    cursor: pointer;
+    align-items: top;
+    justify-content: top;
+    margin: 5vh auto 5vh auto;
   }
 }

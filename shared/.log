@@ -2,8 +2,10 @@
   "global": {
     "path": "clients/global/src/shared",
     "file": [
+      "assets/icons/arrow.svg",
       "assets/icons/close2.svg",
-      "assets/icons/arrow.svg"
+      "assets/icons/google-play.svg",
+      "assets/icons/facebook.svg"
     ],
     "module": [
       "components/user-btns/"

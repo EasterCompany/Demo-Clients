@@ -1,19 +1,17 @@
-import FacebookLogin from 'react-facebook-login';
-
-
-const facebookResponse = (response: any) => {
-    console.log(response)
-}
+import facebookLogo from '../../assets/icons/facebook.svg';
 
 
 const FacebookLoginBtn = () => {
-    return <FacebookLogin
-        appId="1088597931155576"
-        autoLoad={true}
-        fields="name,email,picture"
-        onClick={facebookResponse}
-        callback={facebookResponse}
-    />
+    return <button
+    className="social-login-btn"
+    >
+      <img
+        width="24px"
+        height="24px"
+        src={facebookLogo} alt='google play'
+      />
+      <div style={{textAlign: 'center', width:'100%'}}> Facebook Login </div>
+  </button>
 }
 
 

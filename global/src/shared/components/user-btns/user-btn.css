@@ -11,6 +11,7 @@
   border-radius: 15px;
   border: 0px solid rgba(88,88,88,.25);
   background-color: transparent;
+  user-select: none;
 }
 
 .user-btn:hover {

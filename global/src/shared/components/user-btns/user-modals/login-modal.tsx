@@ -2,8 +2,8 @@ import { useState } from 'react';
 
 import './modal.css';
 import ForgotPassword from './forgot-modal';
-import GoogleLoginBtn from '../google-login';
 import FacebookLoginBtn from '../facebook-login';
+import GoogleLoginBtn from '../google-login';
 import arrowImg from '../../../assets/icons/arrow.svg';
 import closeImg from '../../../assets/icons/close2.svg';
 
@@ -36,7 +36,7 @@ const LoginModal = (props: any) => {
     >
       <h1> Login </h1>
       <div className='user-form-container'>
-        <div className='user-form'>
+        <div className='user-form-social'>
           <GoogleLoginBtn />
           <FacebookLoginBtn />
         </div>
