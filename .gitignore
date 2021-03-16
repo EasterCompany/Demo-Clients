@@ -2,7 +2,10 @@
 # Overlord
 /o
 *.key
-config/clients.json
+/static
+/.logs
+/.config
+*/src/shared
 
 # Sqlite
 *.sqlite3

@@ -13,13 +13,13 @@
 #header-left {
     display: flex;
     flex-direction: column;
-    min-width: 33%;
+    width: 100%;
 }
 
 #header-title {
     display: flex;
     flex-direction: column;
-    min-width: 34%;
+    width: 100%;
     pointer-events: none;
     user-select: none;
 }
@@ -27,7 +27,7 @@
 #header-right {
     display: flex;
     flex-direction: column;
-    min-width: 33%;
+    width: 100%;
 }
 
 h1 {

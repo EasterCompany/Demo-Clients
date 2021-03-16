@@ -1,21 +1,76 @@
+import { useState } from 'react';
+
 import './modal.css';
+import ForgotPassword from './forgot-modal';
+import GoogleLoginBtn from '../google-login';
+import FacebookLoginBtn from '../facebook-login';
 import arrowImg from '../../../assets/icons/arrow.svg';
 import closeImg from '../../../assets/icons/close2.svg';
 
 
 const LoginModal = (props: any) => {
   const [modalDisplay, setDisplay] = props.state;
-  const hideModal = () => setDisplay('none');
+  const [loginDisplay, setLogin] = useState('flex');
+  const [forgotDisplay, setForgot] = useState('none');
+
+  const hideModal = () => {
+    setDisplay('none');
+    setForgot('none');
+    setLogin('flex');
+  }
+
+  const showForgot = () => {
+    setForgot('flex');
+    setLogin('none');
+  }
+
+  const hideForgot = () => {
+    setForgot('none');
+    setLogin('flex');
+  }
+
+  const LoginSection = () => {
+    return <div
+      className="user-login-section"
+      style={{display: loginDisplay}}
+    >
+      <h1> Login </h1>
+      <div className='user-form-container'>
+        <div className='user-form'>
+          <GoogleLoginBtn />
+          <FacebookLoginBtn />
+        </div>
+        <div className='user-form-divider'/>
+        <div className='user-form'>
+          <h1> eProfile </h1>
+          <input type='email' placeholder='email' />
+          <input type='password' placeholder='password' />
+          <button>
+            <img
+              src={arrowImg}
+              alt='login'
+              width="28px"
+              height="100%"
+            />
+            LOGIN
+          </button>
+          <div
+            className='user-forgot'
+            onClick={showForgot}
+          > forgot password </div>
+        </div>
+      </div>
+    </div>
+  }
 
   return <>
     <div
-      id='login-modal'
       className='user-modal'
       style={{display: modalDisplay}}
       onClick={hideModal}
     />
     <div
-      id='login-modal-content'
+      id='user-login-modal'
       className='user-modal-content'
       style={{display: modalDisplay}}
     >
@@ -25,23 +80,8 @@ const LoginModal = (props: any) => {
         alt='close'
         onClick={hideModal}
       />
-      <h1> Login </h1>
-      <div className='user-form-container'>
-        <div className='user-form'>
-          google login / facebook login / github login
-        </div>
-        <div className='user-form-divider'/>
-        <div className='user-form'>
-          <h1> eProfile </h1>
-          <input type='email' placeholder='email' />
-          <input type='password' placeholder='password' />
-          <button>
-            <img src={arrowImg} alt='login' width="28px" height="100%" />
-            LOGIN
-          </button>
-          <a href='/'> forgot password </a>
-        </div>
-      </div>
+      <LoginSection />
+      <ForgotPassword state={[forgotDisplay, hideForgot]} />
     </div>
   </>
 }

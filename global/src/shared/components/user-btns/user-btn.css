@@ -2,6 +2,7 @@
 .user-btn {
   width: 160px;
   height: 60px;
+  cursor: pointer;
   margin: 0 auto;
   color: rgba(168, 98, 98, .75);
   font-family: monospace;

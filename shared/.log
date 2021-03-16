@@ -1,0 +1,12 @@
+{
+  "global": {
+    "path": "clients/global/src/shared",
+    "file": [
+      "assets/icons/close2.svg",
+      "assets/icons/arrow.svg"
+    ],
+    "module": [
+      "components/user-btns/"
+    ]
+  }
+}
