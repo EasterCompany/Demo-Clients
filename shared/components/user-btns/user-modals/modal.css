@@ -99,7 +99,7 @@
   user-select: none;
   align-items: center;
   justify-content: center;
-  width: 200px;
+  width: 275px;
   min-width: fit-content;
   height: 48px;
   min-height: fit-content;
@@ -168,7 +168,7 @@
   .user-form-container a {
     margin: 16px 0 16px 0;
   }
-  .user-form-container :is(input, button) {
+  .user-form :is(input, button) {
     width: 85%;
     margin-top: 16px;
     margin-bottom: 8px;
