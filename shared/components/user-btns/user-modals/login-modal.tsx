@@ -1,5 +1,7 @@
+// Node modules imports
 import { useState } from 'react';
 
+// Local app imports
 import './modal.css';
 import ForgotPassword from './forgot-modal';
 import FacebookLoginBtn from '../facebook-login';

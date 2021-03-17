@@ -11,14 +11,14 @@
 }
 
 .modal-close-button {
+  position: absolute;
   width: 28px;
   height: 28px;
-  top: 16px;
-  left: 16px;
+  top: 1px;
+  left: 1px;
   cursor: pointer;
   user-select: none;
   padding: 6px 6px 6px 6px;
-  position: absolute;
 }
 
 .modal-close-button:hover {
@@ -31,31 +31,33 @@
   flex-direction: column;
   position: fixed;
   z-index: 99;
-  top: 5vh;
+  top: 2.5vh;
   left: 5vw;
   width: 90vw;
-  height: 90vh;
+  height: 95vh;
   border-radius: 5px;
-  overflow: hidden;
+  overflow-y: hidden;
+  overflow-x: hidden;
   background-color: rgba(55,55,55,1);
 }
 
-.user-login-section {
-  flex-direction: inherit; width: inherit; height: inherit;
+.user-login-section, .user-signup-section {
+  flex-direction: inherit; width: inherit;
+  height: inherit; overflow-y: auto;
+  padding-bottom: 32px;
 }
 
 .user-modal-content h1 {
   user-select: none;
   color: lightgrey;
   font-size: calc(16px + 1.5vmin);
-  margin: 2.5vh 0 2.5vh 0;
+  margin: 1.5vh 0 1.5vh 0;
 }
 
 .user-form-container {
   display: flex;
   flex-direction: row;
   min-height: calc(100% - 10vh);
-  overflow: auto;
 }
 
 .user-form, .user-form-social {
@@ -65,17 +67,20 @@
   align-items: center;
   align-content: center;
   justify-content: center;
-  min-width: calc(50% - 1.5px);
+  padding-top: 32px;
+  width: calc(100% - 1.5px);
   height: 90%;
 }
 
 .user-form-social {
+  max-width: 475px;
   margin-top: -14px;
 }
 
 .user-form input {
-  width: 50%;
+  width: 85%;
   min-width: 300px;
+  max-width: 600px;
   height: 48px;
   color: rgb(200,200,200);
   font-size: 28px;
@@ -84,7 +89,7 @@
   border: unset;
   border-radius: 3px;
   border-bottom: 5px solid rgba(133,55,55,.75);
-  margin-bottom: 5%;
+  margin-bottom: 5vh;
   background-color: rgb(35,35,35);
 }
 
@@ -112,7 +117,7 @@
 }
 
 .user-forgot {
-  color: rgb(60, 93, 131);
+  color: rgb(65, 115, 145);
   margin: 32px 0 0 0;
   text-decoration: underline;
   cursor: pointer;
@@ -128,7 +133,7 @@
   width: 100% !important;
   max-width: 345px !important;
   height: 48px !important;
-  margin-bottom: 16px !important;
+  margin-bottom: 5vh !important;
   align-items: left !important;
   justify-content: left !important;
 }
@@ -148,9 +153,13 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1280px) {
+  .user-login-section {
+    overflow-y: hidden;
+  }
   .user-form-container {
-    padding-top: 32px;
+    padding-top: 8px;
+    overflow-y: auto;
     flex-direction: column-reverse;
   }
   .user-form-container h1 {
@@ -160,18 +169,32 @@
     margin: 16px 0 16px 0;
   }
   .user-form-container :is(input, button) {
-    width: 80%;
+    width: 85%;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    max-width: 600px;
   }
   .user-form-divider {
     height: 3px;
     width: 100%;
     margin: 8px 0 8px 0;
   }
+  .user-form {
+    min-height: 300px;
+  }
   .user-form-social {
-    display: block;
+    display: flex;
+    height: 200px;
+    user-select: none;
+    pointer-events: none;
+    margin: 0 auto 0 auto;
+  }
+  .social-login-btn {
+    user-select: none;
+    pointer-events: all;
     cursor: pointer;
-    align-items: top;
-    justify-content: top;
-    margin: 5vh auto 5vh auto;
+    max-width: 300px !important;
+    margin-top: -32px !important;
+    margin-bottom: 48px !important;
   }
 }
