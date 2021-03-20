@@ -9,6 +9,6 @@
     width: 96%;
     max-width: 1000px;
     margin: 0 auto 0 auto;
-    padding: 0 2%  0 2%;
-    height: 82.5vh;
+    padding: 0 2%  48px 2%;
+    height: calc(82.5vh - 48px);
 }

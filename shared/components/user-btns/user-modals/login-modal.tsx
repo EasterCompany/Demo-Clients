@@ -1,11 +1,13 @@
 // Node modules imports
-import { useState } from 'react';
+import { useState, SyntheticEvent } from 'react';
 
 // Local app imports
 import './modal.css';
+import Loader from '../../loading/loading';
 import ForgotPassword from './forgot-modal';
-import FacebookLoginBtn from '../facebook-login';
 import GoogleLoginBtn from '../google-login';
+import FacebookLoginBtn from '../facebook-login';
+import userLoginForm from '../../../library/user/login';
 import arrowImg from '../../../assets/icons/arrow.svg';
 import closeImg from '../../../assets/icons/close2.svg';
 
@@ -14,6 +16,7 @@ const LoginModal = (props: any) => {
   const [modalDisplay, setDisplay] = props.state;
   const [loginDisplay, setLogin] = useState('flex');
   const [forgotDisplay, setForgot] = useState('none');
+  const [loadDisplay, setLoader] = useState('none');
 
   const hideModal = () => {
     setDisplay('none');
@@ -31,6 +34,20 @@ const LoginModal = (props: any) => {
     setLogin('flex');
   }
 
+  const formSubmit = async (event: SyntheticEvent) => {
+    // Prevent Form Submission
+    event.preventDefault();
+    // Fetch User Email
+    const loginEmail =
+      document.getElementById('user-login-email') as HTMLInputElement;
+    // Fetch User Password
+    const loginPassword =
+      document.getElementById('user-login-password') as HTMLInputElement;
+    // Submit User Input
+    setLoader('flex');
+    userLoginForm(loginEmail.value, loginPassword.value, setLoader)
+  }
+
   const LoginSection = () => {
     return <div
       className="user-login-section"
@@ -38,15 +55,28 @@ const LoginModal = (props: any) => {
     >
       <h1> Login </h1>
       <div className='user-form-container'>
-        <div className='user-form-social'>
-          <GoogleLoginBtn />
-          <FacebookLoginBtn />
-        </div>
-        <div className='user-form-divider'/>
-        <div className='user-form'>
+        <Loader state={loadDisplay} />
+        <form
+          className='user-form'
+          onSubmit={formSubmit}
+        >
           <h1> eProfile </h1>
-          <input type='email' placeholder='email' />
-          <input type='password' placeholder='password' />
+          <p
+            id='login-error-message'
+            className='error-message'
+          >
+            Invalid email & password combination.
+          </p>
+          <input
+            id='user-login-email'
+            type='email'
+            placeholder='email'
+          />
+          <input
+            id='user-login-password'
+            type='password'
+            placeholder='password'
+          />
           <button>
             <img
               src={arrowImg}
@@ -60,6 +90,11 @@ const LoginModal = (props: any) => {
             className='user-forgot'
             onClick={showForgot}
           > forgot password </div>
+        </form>
+        <div className='user-form-divider'/>
+        <div className='user-form-social'>
+          <GoogleLoginBtn />
+          <FacebookLoginBtn />
         </div>
       </div>
     </div>

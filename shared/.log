@@ -5,10 +5,15 @@
       "assets/icons/arrow.svg",
       "assets/icons/close2.svg",
       "assets/icons/google-play.svg",
-      "assets/icons/facebook.svg"
+      "assets/icons/facebook.svg",
+      "library/user/login.ts",
+      "library/server/address.ts",
+      "assets/icons/loading.svg",
+      "library/user/register.ts"
     ],
     "module": [
-      "components/user-btns/"
+      "components/user-btns/",
+      "components/loading/"
     ]
   }
 }

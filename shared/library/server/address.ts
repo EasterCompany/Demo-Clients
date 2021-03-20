@@ -3,7 +3,7 @@ const getServerAdr = () => {
     if (window.location.host.startsWith('localhost')){
         return 'http://localhost:8000/';
     } else {
-        return 'https://' + window.location.host;
+        return 'https://' + window.location.host + '/';
     }
 }
 

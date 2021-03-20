@@ -1,30 +1,31 @@
 {
   "files": {
-    "main.css": "/static/css/main.512fe481.chunk.css",
-    "main.js": "/static/js/main.d7f11168.chunk.js",
-    "main.js.map": "/static/js/main.d7f11168.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.05e702e5.js",
-    "runtime-main.js.map": "/static/js/runtime-main.05e702e5.js.map",
-    "static/js/2.59ecdbfb.chunk.js": "/static/js/2.59ecdbfb.chunk.js",
-    "static/js/2.59ecdbfb.chunk.js.map": "/static/js/2.59ecdbfb.chunk.js.map",
-    "static/js/3.4457a5b4.chunk.js": "/static/js/3.4457a5b4.chunk.js",
-    "static/js/3.4457a5b4.chunk.js.map": "/static/js/3.4457a5b4.chunk.js.map",
+    "main.css": "/static/css/main.af807cae.chunk.css",
+    "main.js": "/static/js/main.562d2523.chunk.js",
+    "main.js.map": "/static/js/main.562d2523.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.520cd726.js",
+    "runtime-main.js.map": "/static/js/runtime-main.520cd726.js.map",
+    "static/js/2.b8ae209c.chunk.js": "/static/js/2.b8ae209c.chunk.js",
+    "static/js/2.b8ae209c.chunk.js.map": "/static/js/2.b8ae209c.chunk.js.map",
+    "static/js/3.52b818fe.chunk.js": "/static/js/3.52b818fe.chunk.js",
+    "static/js/3.52b818fe.chunk.js.map": "/static/js/3.52b818fe.chunk.js.map",
     "index.html": "/index.html",
     "service-worker.js": "/service-worker.js",
     "service-worker.js.map": "/service-worker.js.map",
-    "static/css/main.512fe481.chunk.css.map": "/static/css/main.512fe481.chunk.css.map",
-    "static/js/2.59ecdbfb.chunk.js.LICENSE.txt": "/static/js/2.59ecdbfb.chunk.js.LICENSE.txt",
+    "static/css/main.af807cae.chunk.css.map": "/static/css/main.af807cae.chunk.css.map",
+    "static/js/2.b8ae209c.chunk.js.LICENSE.txt": "/static/js/2.b8ae209c.chunk.js.LICENSE.txt",
     "static/media/arrow.f7d53109.svg": "/static/media/arrow.f7d53109.svg",
     "static/media/close.22a241e4.svg": "/static/media/close.22a241e4.svg",
     "static/media/close2.fff17ae7.svg": "/static/media/close2.fff17ae7.svg",
     "static/media/facebook.b57931ba.svg": "/static/media/facebook.b57931ba.svg",
-    "static/media/google-play.316dee2d.svg": "/static/media/google-play.316dee2d.svg",
+    "static/media/google-play.c99601f3.svg": "/static/media/google-play.c99601f3.svg",
+    "static/media/loading.4f77661e.svg": "/static/media/loading.4f77661e.svg",
     "static/media/seclea.4efec40c.jpg": "/static/media/seclea.4efec40c.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.05e702e5.js",
-    "static/js/2.59ecdbfb.chunk.js",
-    "static/css/main.512fe481.chunk.css",
-    "static/js/main.d7f11168.chunk.js"
+    "static/js/runtime-main.520cd726.js",
+    "static/js/2.b8ae209c.chunk.js",
+    "static/css/main.af807cae.chunk.css",
+    "static/js/main.562d2523.chunk.js"
   ]
 }

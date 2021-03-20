@@ -1,5 +1,5 @@
 // NODE MODULE IMPORTS
-import React from 'react';
+import { StrictMode } from 'react';
 import { hydrate, render } from "react-dom";
 
 // LOCAL REQUIREMENTS
@@ -22,11 +22,11 @@ const targetFunc = _targetFunc()
 
 // INDEX
 targetFunc(
-  <React.StrictMode>
+  <StrictMode>
     <Header />
     <Browser />
     <Footer />
-  </React.StrictMode>,
+  </StrictMode>,
   document.getElementById('root')
 )
 

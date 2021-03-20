@@ -1,22 +1,28 @@
 
 .user-btn {
-  width: 90%;
+  width: 50%;
+  max-width: 200px;
+  min-width: fit-content;
   height: 100%;
   cursor: pointer;
   margin: 0 auto;
-  color: rgba(168, 98, 98, .75);
+  color: rgba(168, 98, 98, 1);
   font-family: monospace;
   font-size: 24px;
   outline: none;
-  border-radius: 15px;
-  border: 0px solid rgba(88,88,88,.25);
+  border: 0px solid;
+  transition: all .66s ease;
+  border-bottom: 2px solid rgba(168,98,98,.75);
   background-color: transparent;
   user-select: none;
 }
 
 .user-btn:hover {
   transition: all .33s ease;
-  border-bottom: 8px solid rgba(133,88,88,.75);
+  width: 90%;
+  max-width: 400px;
+  border-radius: 15px;
+  border-bottom: 8px solid rgba(168,98,98,.75);;
   background-image: linear-gradient(
     to top, rgba(155, 155, 155, .25), transparent
   );

@@ -51,13 +51,18 @@
   user-select: none;
   color: lightgrey;
   font-size: calc(16px + 1.5vmin);
-  margin: 1.5vh 0 1.5vh 0;
+  margin: 1.5vh 0 .5vh 0;
+}
+
+.user-modal-content h2 {
+  user-select: none;
+  margin: 4px 0 4px 0;
 }
 
 .user-form-container {
   display: flex;
-  flex-direction: row;
-  min-height: calc(100% - 10vh);
+  flex-direction: row-reverse;
+  min-height: calc(100% - 6vh);
 }
 
 .user-form, .user-form-social {
@@ -78,8 +83,8 @@
 }
 
 .user-form input {
-  width: 85%;
-  min-width: 300px;
+  width: 95%;
+  min-width: 290px;
   max-width: 600px;
   height: 48px;
   color: rgb(200,200,200);
@@ -91,6 +96,17 @@
   border-bottom: 5px solid rgba(133,55,55,.75);
   margin-bottom: 5vh;
   background-color: rgb(35,35,35);
+}
+
+.user-form input:-webkit-autofill,
+.user-form input:-webkit-autofill:hover,
+.user-form input:-webkit-autofill:focus,
+.user-form input:-webkit-autofill:active
+{
+  -webkit-text-fill-color: rgb(200,200,200) !important;
+  box-shadow: 0 0 0 0 rgb(35,35,35) inset !important;
+  -webkit-box-shadow: 0 0 0 30px rgb(35,35,35) inset !important;
+  border-bottom: 5px solid rgba(133,55,55,1);
 }
 
 .user-form button, .user-form-social button {
@@ -144,6 +160,19 @@
   margin: 2px 14px 0 14px !important;
 }
 
+.error-message {
+  display: none;
+  color: red;
+  width: 95%;
+  user-select: none;
+  max-width: 375px;
+  padding: 3px 3px 3px 3px;
+  margin: 12px auto 12px auto;
+  border-radius: 6px;
+  border: 2px solid rgba(133,55,55,.75);
+  background-color: rgb(35,35,35);
+}
+
 @media (max-height: 640px), (max-width: 480px) {
   .user-modal-content {
     top: 1vh;
@@ -160,7 +189,8 @@
   .user-form-container {
     padding-top: 8px;
     overflow-y: auto;
-    flex-direction: column-reverse;
+    min-height: calc(100% - 2vh);
+    flex-direction: column;
   }
   .user-form-container h1 {
     display: none;

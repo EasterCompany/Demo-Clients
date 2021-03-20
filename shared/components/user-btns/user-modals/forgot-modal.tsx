@@ -7,7 +7,7 @@ const ForgotPassword = (props: any) => {
     className="user-login-section"
     style={{display: forgotDisplay}}>
     <h1> Recover Account </h1>
-    <div
+    <form
       className="user-form"
       style={{
         height: "75%"
@@ -28,7 +28,7 @@ const ForgotPassword = (props: any) => {
         className='user-forgot'
         onClick={hideForgot}
       > login instead </div>
-    </div>
+    </form>
   </div>
 }
 
