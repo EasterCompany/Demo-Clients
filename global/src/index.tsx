@@ -31,7 +31,7 @@ targetFunc(
 )
 
 // SERVICE WORKER
-serviceWorkerRegistration.register();
+serviceWorkerRegistration.unregister();
 
 // WEB VITALS
 reportWebVitals();
