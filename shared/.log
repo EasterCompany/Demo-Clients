@@ -9,7 +9,11 @@
       "library/user/login.ts",
       "library/server/address.ts",
       "assets/icons/loading.svg",
-      "library/user/register.ts"
+      "library/user/register.ts",
+      "library/user/fetchData.ts",
+      "assets/icons/userImage.svg",
+      "assets/icons/menu.svg",
+      "assets/icons/chat.svg"
     ],
     "module": [
       "components/user-btns/",
