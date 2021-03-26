@@ -1,10 +1,8 @@
-import isUser from '../../library/user/fetchData';
 import menuImage from '../../assets/icons/menu.svg';
 import chatImage from '../../assets/icons/chat.svg';
 
 
 const MenuBtns = () => {
-  if (!isUser()) return <></>
   return <div
     style={{
       display: 'flex',

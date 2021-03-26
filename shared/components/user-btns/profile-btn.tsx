@@ -1,9 +1,7 @@
-import isUser from '../../library/user/fetchData';
 import userImage from '../../assets/icons/userImage.svg';
 
 
 const ProfileBtn = () => {
-  if (!isUser()) return <></>
   return <div
     style={{
       display: 'flex',

@@ -17,9 +17,9 @@ const userLoginForm = async (email: string, password: string, loader: Function) 
         if (errorEl !== null) errorEl.style.display = 'block';
       } else {
         document.cookie =
-          `KEY=${data['session']};expires=${data['expires']};path=/;Secure;SameSite=None;`
+          `KEY=${data['session']};path=/;Secure;SameSite=None;`
         document.cookie =
-          `UID=${data['uid']};expires=${data['expires']};path=/;Secure;SameSite=None;`
+          `UID=${data['uid']};path=/;Secure;SameSite=None;`
         window.location.reload();
       }
     })
@@ -27,4 +27,22 @@ const userLoginForm = async (email: string, password: string, loader: Function) 
 };
 
 
+const verifySession = async (uid: any, key: any) => {
+  await fetch(serverAdr + 'api/login/verify', {
+    headers: {
+      'Content-Type': 'text/plain',
+      'Authorization': uid + ' ' + key
+    }
+  }).then(response => {response.json().then((data) => {
+    console.log(uid, key, data);
+    if (data['status'] === 'BAD') {
+      document.cookie = `KEY=none;expires=Thu, 01 Jan 1970 00:00:01 GMT`;
+      document.cookie = `UID=none;expires=Thu, 01 Jan 1970 00:00:01 GMT`;
+      window.location.reload();
+    }
+  })})
+}
+
+
 export default userLoginForm;
+export { verifySession };

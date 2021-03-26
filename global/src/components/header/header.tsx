@@ -6,36 +6,22 @@ import MenuBtns from '../../shared/components/user-btns/menu-btns';
 import isUser from '../../shared/library/user/fetchData';
 
 
-const HeaderLeft = () => {
-  const InnerContent = () => {
-    if (isUser()) return <ProfileBtn />
-    return <SignupBtn />
-  }
-  return <div id='header-left'>
-    <InnerContent />
-  </div>
-}
-
-
-const HeaderRight = () => {
-  const InnerContent = () => {
-    if (isUser()) return <MenuBtns />
-    return <LoginBtn />
-  }
-  return <div id='header-right'>
-    <InnerContent />
-  </div>
-}
-
-
 const Header = () => {
   return <div id='header'>
-    <HeaderLeft />
+
+    <div id='header-left'>
+      {isUser ? <ProfileBtn /> : <SignupBtn />}
+    </div>
+
     <div id='header-title'>
       <h1> App Browser </h1>
       select an application
     </div>
-    <HeaderRight />
+
+    <div id='header-right'>
+      {isUser ? <MenuBtns /> : <LoginBtn />}
+    </div>
+
   </div>
 }
 
