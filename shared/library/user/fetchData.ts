@@ -10,7 +10,11 @@ const cookie = (key: string) => {
 const getUserData = () => {
   const localData = {
     "uid": cookie('UID'),
-    "key": cookie('KEY')
+    "key": cookie('KEY'),
+    "dname": cookie('DNME'),
+    "fname": cookie('FNME'),
+    "lname": cookie('LNME'),
+    "email": cookie('EMAIL'),
   };
   if (localData.uid !== '' && localData.key !== '')
     verifySession(localData.uid, localData.key);

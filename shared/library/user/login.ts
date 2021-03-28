@@ -1,5 +1,18 @@
-import serverAdr from '../server/address';
+import logout from './logout';
 import { md5 } from 'hash-wasm';
+import serverAdr from '../server/address';
+
+
+const updateUserData = (data: any) => {
+  document.cookie =
+    `DNME=${data['dname']};path=/;Secure;SameSite=None;`
+  document.cookie =
+    `DIMG=${data['image']};path=/;Secure;SameSite=None;`
+  document.cookie =
+    `FNME=${data['fname']};path=/;Secure;SameSite=None;`
+  document.cookie =
+    `LNME=${data['lname']};path=/;Secure;SameSite=None;`
+}
 
 
 const userLoginForm = async (email: string, password: string, loader: Function) => {
@@ -17,9 +30,12 @@ const userLoginForm = async (email: string, password: string, loader: Function) 
         if (errorEl !== null) errorEl.style.display = 'block';
       } else {
         document.cookie =
-          `KEY=${data['session']};path=/;Secure;SameSite=None;`
+          `KEY=${data['key']};path=/;Secure;SameSite=None;`
         document.cookie =
           `UID=${data['uid']};path=/;Secure;SameSite=None;`
+        document.cookie =
+          `EMAIL=${data['email']};path=/;Secure;SameSite=None;`
+        updateUserData(data);
         window.location.reload();
       }
     })
@@ -28,18 +44,16 @@ const userLoginForm = async (email: string, password: string, loader: Function) 
 
 
 const verifySession = async (uid: any, key: any) => {
+  // Fetch session verification
   await fetch(serverAdr + 'api/login/verify', {
     headers: {
       'Content-Type': 'text/plain',
       'Authorization': uid + ' ' + key
     }
   }).then(response => {response.json().then((data) => {
-    console.log(uid, key, data);
-    if (data['status'] === 'BAD') {
-      document.cookie = `KEY=none;expires=Thu, 01 Jan 1970 00:00:01 GMT`;
-      document.cookie = `UID=none;expires=Thu, 01 Jan 1970 00:00:01 GMT`;
-      window.location.reload();
-    }
+    if (data['status'] === 'OK') return updateUserData(data);
+    logout();
+    return window.location.reload();
   })})
 }
 

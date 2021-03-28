@@ -11,7 +11,7 @@ const MenuBtns = () => {
       maxWidth: '248px',
       height: '100%',
       maxHeight: '42px',
-      margin: 'auto auto auto 0',
+      margin: 'auto auto auto auto',
       justifyContent: 'space-around',
       userSelect: 'none'
     }}

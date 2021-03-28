@@ -97,13 +97,14 @@
 
 .browser-app-bio-close {
     position: absolute;
+    cursor: pointer;
     z-index: 12;
     width: 8vmin;
     height: 8vmin;
-    min-width: 48px;
-    min-height: 48px;
-    max-width: 80px;
-    max-height: 80px;
+    min-width: 32px;
+    min-height: 32px;
+    max-width: 64px;
+    max-height: 64px;
     margin: 2% 2% 2% 2%;
     background-size: cover;
     background-position: center;

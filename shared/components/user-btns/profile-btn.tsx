@@ -1,4 +1,5 @@
 import userImage from '../../assets/icons/userImage.svg';
+import { userData } from '../../library/user/fetchData';
 
 
 const ProfileBtn = () => {
@@ -10,8 +11,8 @@ const ProfileBtn = () => {
       maxWidth: '248px',
       height: '100%',
       maxHeight: '42px',
-      margin: 'auto 0 auto auto',
-      justifyContent: 'space-between',
+      margin: 'auto auto auto auto',
+      justifyContent: 'center',
       userSelect: 'none',
       cursor: 'pointer',
     }}
@@ -24,14 +25,14 @@ const ProfileBtn = () => {
         height: '100%',
         maxWidth: '42px',
         maxHeight: '42px',
-        margin: 'auto 12px auto auto',
+        margin: 'auto 6px auto 6px',
       }}
     />
     <p style={{
         fontSize: 'calc(8px + 1.5vmin)',
         margin: 'auto 0 auto 12px'
       }}
-    > user_name_here </p>
+    > {userData.dname} </p>
   </div>
 }
 
