@@ -1,10 +1,10 @@
 import serverAdr from '../server/address';
+import userLoginForm from './login';
 import { md5 } from 'hash-wasm';
 
 
 const userRegisterForm = async (
-    email: string, password: string,
-    dob: string, loader: Function
+    email: string, password: string, dob: string
   ) => {
   const userData =
     '?data=' + encodeURIComponent(email) +
@@ -18,9 +18,11 @@ const userRegisterForm = async (
   }
   }).then((response) => {response.json().then((data) => {
       const result = data['status'];
-      if (result !== 'OK') alert(result);
-      loader('none')
-      if (result === 'OK') window.location.reload();
+      if (result !== 'OK') {
+        alert(result);
+        return window.location.reload();
+      }
+      else return userLoginForm(email, password, (p: any) => {});
     })
   })
 };

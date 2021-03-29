@@ -24,10 +24,10 @@ const userLoginForm = async (email: string, password: string, loader: Function) 
   }
   }).then((response) => {response.json().then((data) => {
       const result = data['status'];
-      loader('none');
       if (result === 'BAD') {
         const errorEl = document.getElementById('login-error-message') as HTMLElement;
         if (errorEl !== null) errorEl.style.display = 'block';
+        loader('none');
       } else {
         document.cookie =
           `KEY=${data['key']};path=/;Secure;SameSite=None;`

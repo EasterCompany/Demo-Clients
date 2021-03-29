@@ -11,6 +11,7 @@
 }
 
 .modal-close-button {
+  z-index: 100;
   position: absolute;
   width: 28px;
   height: 28px;
@@ -42,8 +43,11 @@
 }
 
 .user-login-section, .user-signup-section {
-  flex-direction: inherit; width: inherit;
-  height: inherit; overflow-y: auto;
+  display: flex;
+  flex-direction: inherit;
+  width: inherit;
+  height: inherit;
+  overflow-y: hidden;
   padding-bottom: 32px;
 }
 
@@ -86,7 +90,7 @@
   width: 95%;
   min-width: 290px;
   max-width: 600px;
-  height: 48px;
+  min-height: 48px;
   color: rgb(200,200,200);
   font-size: 28px;
   padding-left: 8px;
@@ -116,9 +120,7 @@
   align-items: center;
   justify-content: center;
   width: 275px;
-  min-width: fit-content;
-  height: 48px;
-  min-height: fit-content;
+  min-height: 48px;
   font-size: 22px;
   font-family: monospace;
   color: rgb(200,200,200);
