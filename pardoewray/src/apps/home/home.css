@@ -1,0 +1,13 @@
+
+.article {
+    margin: 12vh 0 0 0;
+    min-height: 73vh;
+    background-color: #222;
+    background-image: radial-gradient(rgba(255,255,255,1), rgba(40, 52, 130, 1));
+}
+
+.article-content {
+    margin: 0 10% 0 10%;
+    min-height: 73vh;
+    background-color: whitesmoke;
+}

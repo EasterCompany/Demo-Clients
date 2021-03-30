@@ -11,6 +11,7 @@ import donationLogo from '../../assets/images/donation.jpg';
 import inverairLogo from '../../assets/images/inverair.jpg';
 import ecuisineLogo from '../../assets/images/ecuisine.jpg';
 import forensicLogo from '../../assets/images/forensic.jpg';
+import pardoewrayLogo from '../../assets/images/pardoewray.jpg';
 
 
 const Browser = () => {
@@ -48,6 +49,15 @@ const Browser = () => {
       details on how much Co2, waste, water..etc will be saved if they commit to
       their pledge and also how much of the above variables have been saved by
       all users on their platform.`}
+    />
+    <App
+      title='PardoeWray'
+      image={pardoewrayLogo}
+      link='pardoewray'
+      description={`Pardoewray talent management agency has tasked us with the development
+        of a new web application for their customers & clients to utilize in finding,
+        sharing and advertising applications while also providing a great advertising
+        platform for Pardoewray as a company.`}
     />
     <App
       title='Tools'

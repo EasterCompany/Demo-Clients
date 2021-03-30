@@ -17,5 +17,13 @@
       "library/server/",
       "library/user/"
     ]
+  },
+  "pardoewray": {
+    "path": "clients/pardoewray/src/shared",
+    "file": [
+      "assets/icons/linkedin.svg",
+      "assets/icons/lock.svg"
+    ],
+    "module": []
   }
 }
