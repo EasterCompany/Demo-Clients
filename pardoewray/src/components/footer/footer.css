@@ -1,12 +1,14 @@
 
 #footer {
   width: 80%;
+  z-index: 100;
   display: flex;
   min-height: 10vh;
   overflow: hidden;
   padding: 1vh 10% 1vh 10%;
   justify-content: space-between;
   background-color: #283583;
+  filter: drop-shadow(1px 1px 5px rgba(55,55,55,.5));
 }
 
 #footer-info {
