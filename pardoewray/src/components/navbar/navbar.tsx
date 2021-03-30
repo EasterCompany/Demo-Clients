@@ -9,6 +9,7 @@ const Navbar = () => {
       <button> Candidate </button>
       <button> About Us </button>
     </div>
+    <div id="nav-menu-button" />
   </div>
 };
 

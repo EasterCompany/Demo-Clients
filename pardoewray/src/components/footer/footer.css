@@ -1,11 +1,11 @@
 
 #footer {
-  width: 80%;
+  width: 76%;
   z-index: 100;
   display: flex;
   min-height: 10vh;
   overflow: hidden;
-  padding: 1vh 10% 1vh 10%;
+  padding: 1vh 12% 1vh 12%;
   justify-content: space-between;
   background-color: #283583;
   filter: drop-shadow(1px 1px 5px rgba(55,55,55,.5));
@@ -18,7 +18,7 @@
 
 #footer-info h6, a {
   color: white;
-  font-size: calc(5px + 1vmin);
+  font-size: 12px;
   margin: 2vh 0 2vh 0;
 }
 
@@ -52,4 +52,26 @@
 #footer-refs img {
   width: 10vmin;
   max-width: 48px;
+}
+
+@media (max-width: 955px) {
+  #footer {
+    flex-direction: column;
+    width: 100%;
+    padding: unset;
+  }
+  #footer-info {
+    width: 100%;
+    text-align: center;
+  }
+  #footer-right {
+    width: 100%;
+  }
+  #footer-logo {
+    margin-left: unset;
+  }
+  #footer-refs {
+    padding: 0 25% 0 25%;
+    width: 50%;
+  }
 }

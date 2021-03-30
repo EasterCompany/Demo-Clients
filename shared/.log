@@ -22,7 +22,8 @@
     "path": "clients/pardoewray/src/shared",
     "file": [
       "assets/icons/linkedin.svg",
-      "assets/icons/lock.svg"
+      "assets/icons/lock.svg",
+      "assets/icons/menu.svg"
     ],
     "module": []
   }

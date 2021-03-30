@@ -12,10 +12,8 @@ const Footer = () => {
     <div id="footer-right">
       <div id="footer-logo"/>
       <div id="footer-refs">
-        <a style={{display: 'flex', flexDirection: 'row', margin: '0 0 0 0'}}
-          href="https://5c56eae8-0f8b-4751-9b48-4bdb49242d47.filesusr.com/ugd/541e18_26b3fd278755469b88d7814590a08071.pdf">
+        <a href="https://5c56eae8-0f8b-4751-9b48-4bdb49242d47.filesusr.com/ugd/541e18_26b3fd278755469b88d7814590a08071.pdf">
           <img src={lockImg} alt="GDPR Policy" />
-          <h6 style={{fontSize: '12px', marginTop: '46px'}}> GDPR Policy </h6>
         </a>
         <a href="https://www.linkedin.com/company/pardoewray/">
           <img src={linkedinLogo} alt="linkedin"/>
