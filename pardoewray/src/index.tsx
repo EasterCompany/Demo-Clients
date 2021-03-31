@@ -24,7 +24,11 @@ const targetFunc = _targetFunc()
 targetFunc(
   <React.StrictMode>
     <Navbar />
-    <Home />
+    <div id="article">
+      <div id="article-content">
+        <Home />
+      </div>
+    </div>
     <Footer />
   </React.StrictMode>,
   document.getElementById('root')

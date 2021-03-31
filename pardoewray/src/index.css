@@ -25,3 +25,29 @@ code {
   background: #222;
   border-radius: 10px;
 }
+
+#article {
+  z-index: 0;
+  margin: 10vh 0 0 0;
+  min-height: 80vh;
+  background-color: #222;
+  background-image: radial-gradient(rgba(255,255,255,1), rgba(40, 52, 130, 1));
+}
+
+#article-content {
+  z-index: 0;
+  margin: 0 10% 0 10%;
+  padding-bottom: 80px;
+  min-height: 80vh;
+  background-color: whitesmoke;
+  filter: drop-shadow(1px -5px 3px whitesmoke);
+}
+
+@media (max-width: 999px) {
+  #article {
+    margin: calc(48px + 2vh) 0 0 0;
+  }
+  #article-content {
+    margin: 0 1% 0 1%;
+  }
+}

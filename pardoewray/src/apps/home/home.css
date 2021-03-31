@@ -1,25 +1,89 @@
 
-.article {
-  z-index: 0;
-  margin: 10vh 0 0 0;
-  min-height: 80vh;
-  background-color: #222;
-  background-image: radial-gradient(rgba(255,255,255,1), rgba(40, 52, 130, 1));
+#home-banner {
+    margin: 0 auto;
+    width: 100%;
+    min-width: 300px;
+    height: 30vh;
+    min-height: 225px;
+    background-repeat: no-repeat;
+    background-position: bottom;
 }
 
-.article-content {
-  z-index: 0;
-  margin: 0 10% 0 10%;
-  min-height: 80vh;
-  background-color: whitesmoke;
-  filter: drop-shadow(1px -5px 3px whitesmoke);
+#home-banner2 {
+    margin: 48px auto;
+    width: 100%;
+    min-width: 300px;
+    height: 475px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    filter: drop-shadow(0 2px 6px black);
+}
+
+.home-bio {
+    display: flex;
+    flex-direction: row;
+    padding: 32px 2% 0 2%;
+}
+
+.home-bio h1, h2, p {
+    margin: 0 0 0 0;
+    min-width: 300px;
+    font-size: 18px;
+}
+
+.home-bio h1, h2 {
+    color: rgb(40, 52, 130);
+}
+
+.home-bio p {
+    color: rgba(0,0,0,0.9);
+}
+
+#home-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 10vh 0 calc(10vh) 0;
+}
+
+#home-buttons button {
+    width: 25%;
+    height: 75px;
+    font-size: 22px;
+    margin-top: 32px;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: whitesmoke;
+    background-color: rgb(40, 52, 130);
+}
+
+#home-buttons button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    filter: drop-shadow(1px 1px 10px grey);
+    background-color: rgba(40, 52, 130, .75);
+}
+
+.home-section-header {
+    width: 100%;
+    text-align: center;
+    color: rgba(25,25,25,0.25);
+    font-size: 32px;
+    margin: 48px 0 16px 0;
 }
 
 @media (max-width: 999px) {
-  .article {
-    margin: 48px 0 0 0;
-  }
-  .article-content {
-    margin: 0 1% 0 1%;
-  }
+    .home-bio {
+        flex-direction: column;
+    }
+    #home-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    #home-buttons button {
+        width: 50%;
+    }
 }
