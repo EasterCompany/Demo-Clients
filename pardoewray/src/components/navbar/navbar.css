@@ -64,7 +64,8 @@
   display: none;
   width: 48px;
   height: 48px;
-  margin-left: calc(40vw - 20vmin);
+  margin-left: calc(100vw - 250px);
+  margin-right: 36px;
   background-position: center;
   background-repeat: no-repeat;
   background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23283583"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 17h-12v-2h12v2zm0-4h-12v-2h12v2zm0-4h-12v-2h12v2z"/></svg>');
@@ -83,7 +84,7 @@
   }
   #header {
     display: flex;
-    width: 50%;
+    width: 225px;
     margin-left: 36px;
   }
   #navbar {
@@ -102,16 +103,19 @@
     z-index: 101 !important;
     display: flex !important;
     flex-direction: column !important;
+    width: 100vw !important;
+    margin: -1vh -1vw -1vh -258px !important;
     height: 400px !important;
     max-height: 80vh !important;
-    overflow-y: auto !important;
-    width: 100vw !important;
-    margin-left: -52.5% !important;
+    background-color: rgb(40, 52, 130) !important;
   }
   .navbar-menu-open button {
     display: block !important;
     height: 100% !important;
     width: 100% !important;
     background-color: whitesmoke !important;
+  }
+  .navbar-menu-open button:hover {
+    border: unset !important;
   }
 }
