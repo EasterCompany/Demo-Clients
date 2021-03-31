@@ -33,6 +33,7 @@
 }
 
 .home-bio h1, h2 {
+    text-align: left;
     color: rgb(40, 52, 130);
 }
 

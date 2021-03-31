@@ -2,7 +2,7 @@ import './home.css';
 import stockp1 from '../../assets/stockp1.webp';
 import stockp2 from '../../assets/stockp2.webp';
 import stockp3 from '../../assets/stockp3.webp';
-import { clientClick, candidateClick } from '../../components/navbar/navbar';
+import { clientClick, candidateClick, jobsClick } from '../../components/navbar/navbar';
 
 const Home = () => {
   return <>
@@ -36,7 +36,7 @@ const Home = () => {
     <div id="home-buttons">
       <button onClick={clientClick}> Get Me Hired </button>
       <button onClick={candidateClick}> Find Me Candidates </button>
-      <button> View Positions </button>
+      <button onClick={jobsClick}> View Positions </button>
     </div>
 
     <div className="home-bio">

@@ -51,5 +51,6 @@ const Navbar = () => {
 export default Navbar;
 export {
   clientClick,
-  candidateClick
+  candidateClick,
+  jobsClick
 }
