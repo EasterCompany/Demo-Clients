@@ -103,12 +103,14 @@
     display: flex !important;
     flex-direction: column !important;
     height: 400px !important;
+    max-height: 80vh !important;
+    overflow-y: auto !important;
     width: 100vw !important;
     margin-left: -52.5% !important;
   }
   .navbar-menu-open button {
     display: block !important;
-    height: 100px !important;
+    height: 100% !important;
     width: 100% !important;
     background-color: whitesmoke !important;
   }
