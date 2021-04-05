@@ -28,8 +28,8 @@ targetFunc(
       <div id="article-content">
         <Home />
       </div>
+      <Footer />
     </div>
-    <Footer />
   </React.StrictMode>,
   document.getElementById('root')
 )

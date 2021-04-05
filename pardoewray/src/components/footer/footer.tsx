@@ -5,9 +5,9 @@ import linkedinLogo from '../../shared/assets/icons/linkedin.svg';
 const Footer = () => {
   return <div id="footer">
     <div id="footer-info">
-      <h6> Phone: <a href="tel:0191 933 0028">0191 933 0028</a> </h6>
-      <h6> Email: <a href="mailto:info@pardoewray.com">info@pardoewray.com</a> </h6>
-      <h6> 3 Bankside | The Watermark | Gateshead | NE11 9SY </h6>
+      <p> Phone: <a href="tel:0191 933 0028">0191 933 0028</a> </p>
+      <p> Email: <a href="mailto:info@pardoewray.com">info@pardoewray.com</a> </p>
+      <p> 3 Bankside | The Watermark | Gateshead | NE11 9SY </p>
     </div>
     <div id="footer-right">
       <div id="footer-logo"/>

@@ -18,34 +18,41 @@ code {
 }
 
 ::-webkit-scrollbar-track {
-  background: #283583;
+  background: #222;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #222;
+  background: #4472c4;
   border-radius: 10px;
 }
 
 #article {
+  position: fixed;
   z-index: 0;
-  margin: 10vh 0 0 0;
-  min-height: 80vh;
-  background-color: #222;
-  background-image: radial-gradient(rgba(255,255,255,1), rgba(40, 52, 130, 1));
+  top: 58px;
+  left: 0;
+  height: calc(100vh - 58px);
+  width: 100vw;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-color: #4472c4 #222;
+  scrollbar-width: thin;
+  background-position: -500px -500px;
+  background-image: radial-gradient(#273483, #131a42);
+  background-color: #202c6e;
 }
 
 #article-content {
   z-index: 0;
+  color: white;
   margin: 0 10% 0 10%;
   padding-bottom: 80px;
-  min-height: 80vh;
-  background-color: whitesmoke;
-  filter: drop-shadow(1px -5px 3px whitesmoke);
 }
 
 @media (max-width: 999px) {
   #article {
-    margin: calc(48px + 2vh) 0 0 0;
+    top: 48px;
+    height: calc(100vh - 48px);
   }
   #article-content {
     margin: 0 1% 0 1%;

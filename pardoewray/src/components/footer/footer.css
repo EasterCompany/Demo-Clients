@@ -7,7 +7,7 @@
   overflow: hidden;
   padding: 1vh 12% 1vh 12%;
   justify-content: space-between;
-  background-color: #283583;
+  background-color: #242048;
   filter: drop-shadow(1px 1px 5px rgba(55,55,55,.5));
 }
 
@@ -16,9 +16,10 @@
   height: 100%;
 }
 
-#footer-info h6, a {
+#footer-info p, a {
   color: white;
   font-size: 12px;
+  font-weight: bold;
   margin: 2vh 0 2vh 0;
 }
 
