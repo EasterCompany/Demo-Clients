@@ -46,7 +46,7 @@
 
 
 .home-left p {
-  font-weight: lighter;
+  font-weight: 300;
   padding: 1% 1% 1% 1%;
   color: rgb(243,240,236);
 }
@@ -62,14 +62,14 @@
   width: 100%;
 }
 
-#home-buttons {
+.home-buttons {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 10vh 0 calc(10vh) 0;
+  padding: 10vh 0 10vh 0;
 }
 
-#home-buttons button {
+.home-buttons button {
   width: 25%;
   height: 75px;
   font-size: 20px;
@@ -82,7 +82,7 @@
   background-color: rgb(85, 145, 126);
 }
 
-#home-buttons button:hover {
+.home-buttons button:hover {
   cursor: pointer;
   transform: scale(1.05);
   border: 3px solid rgb(64, 76, 148);
@@ -151,12 +151,12 @@
 }
 
 @media (max-width: 999px) {
-  .home-section {flex-direction: column-reverse; margin: 0 0 0 0;}
+  .home-section {flex-direction:column-reverse;margin: 0 0 0 0;}
   .home-title img {display: flex;}
   .home-left {max-width:unset;}
   .home-right {display: none;}
-  #home-buttons {flex-direction: column; align-items: center;}
-  #home-buttons button {width: 75%;}
+  .home-buttons {flex-direction: column; align-items: center;}
+  .home-buttons button {width: 75%;}
   .team-member-container {
     flex-direction: column;
     text-align: center;

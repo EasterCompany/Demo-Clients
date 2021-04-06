@@ -128,9 +128,9 @@ recruitment and development of the Equity Partners within Key Selection."
 const Home = () => {
   return <>
     <Introduction />
-    <div id="home-buttons">
-      <button onClick={clientClick}> Get Me Hired </button>
-      <button onClick={candidateClick}> Find Me Candidates </button>
+    <div className="home-buttons">
+      <button onClick={candidateClick}> Get Me Hired </button>
+      <button onClick={clientClick}> Find Me Candidates </button>
       <button onClick={jobsClick}> View Positions </button>
     </div>
     <TheTeam />
