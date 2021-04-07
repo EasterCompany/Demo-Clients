@@ -1,13 +1,13 @@
 import './client.css';
 import '../home/home.css';
-import statsImg from '../../assets/stats.webp';
+import tallImg from '../../assets/tall.jpg';
 import zelephant from '../../assets/zelephant.webp';
 
 
 const TopSection = () => {
   return <div className="home-section">
-    <div className="home-left" style={{maxWidth: '640px'}}>
-      <h2 style={{fontSize: 'calc(48px + 2vmin)'}}> What we do </h2>
+    <div className="home-left" style={{maxWidth: '80%', paddingLeft: '8%'}}>
+      <h2 style={{fontSize: 'calc(36px + 2vmin)'}}> What we do </h2>
       <h3
         style={{fontSize: 'calc(28px + 2vmin)'}}
       > We’re your Talent Management partner. </h3>
@@ -20,9 +20,9 @@ const TopSection = () => {
     </div>
     <div className="home-right">
       <img
-        src={statsImg}
+        src={zelephant}
         alt="98% of stats are made up."
-        style={{maxWidth: '264px'}}
+        style={{maxWidth: '320px'}}
       />
     </div>
   </div>
@@ -112,9 +112,12 @@ const BottomSection = () => {
 
     <div
       className="home-right"
-      style={{maxWidth: '640px', minWidth: '200px', paddingRight: '5vw'}}
+      style={{paddingRight: '2vw'}}
     >
-      <img src={zelephant} alt="pardoewray elephant" />
+      <img
+        src={tallImg}
+        alt="pardoewray elephant"
+      />
     </div>
 
   </div>

@@ -1,6 +1,7 @@
 // NODE MODULE IMPORTS
 import React from 'react';
 import { hydrate, render } from "react-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 // LOCAL REQUIREMENTS
 import reportWebVitals from './library/reportWebVitals';
@@ -8,7 +9,7 @@ import * as serviceWorkerRegistration from './library/serviceWorkerRegistration'
 
 // APPLICATION IMPORTS
 import './index.css';
-import Home from './apps/home/home';
+import Routes from './routes';
 import Footer from './components/footer/footer';
 import Navbar from './components/navbar/navbar';
 
@@ -23,13 +24,15 @@ const targetFunc = _targetFunc()
 // APPLICATION INDEX
 targetFunc(
   <React.StrictMode>
-    <Navbar />
-    <div id="article">
-      <div id="article-content">
-        <Home />
+    <Router>
+      <Navbar />
+      <div id="article">
+        <div id="article-content">
+          <Routes />
+        </div>
+        <Footer />
       </div>
-      <Footer />
-    </div>
+    </Router>
   </React.StrictMode>,
   document.getElementById('root')
 )

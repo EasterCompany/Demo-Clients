@@ -5,7 +5,6 @@ import philImg from '../../assets/phil.webp';
 import katieImg from '../../assets/katie.webp';
 import nathanImg from '../../assets/nathan.webp';
 import logoImg from '../../assets/zelephant2.webp';
-import { clientClick, candidateClick, jobsClick } from '../../components/navbar/navbar';
 
 
 const Introduction = () => {
@@ -129,9 +128,9 @@ const Home = () => {
   return <>
     <Introduction />
     <div className="home-buttons">
-      <button onClick={candidateClick}> Get Me Hired </button>
-      <button onClick={clientClick}> Find Me Candidates </button>
-      <button onClick={jobsClick}> View Positions </button>
+      <button> Get Me Hired </button>
+      <button> Find Me Candidates </button>
+      <button> View Positions </button>
     </div>
     <TheTeam />
   </>
