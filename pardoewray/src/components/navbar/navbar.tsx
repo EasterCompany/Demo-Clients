@@ -1,22 +1,16 @@
-// Modules
-import { Link } from "react-router-dom";
 // Component imports
 import './navbar.css';
+import { Link } from "../../shared/components/routes/routes";
 
-const NavButton = (props: any) => {
-  return <Link to={props.link}>
-    {props.name}
-  </Link>
-}
 
 const Navbar = () => {
   return <div id="nav-header">
     <div id="header" />
     <nav>
-      <NavButton link="/" name="Home" />
-      <NavButton link="/client" name="Client" />
-      <NavButton link="/candidate" name="Candidate" />
-      <NavButton link="/jobs" name="Jobs" />
+      <Link link="" name="Home" />
+      <Link link="client" name="Client" />
+      <Link link="candidate" name="Candidate" />
+      <Link link="jobs" name="Jobs" />
     </nav>
     <div
       id="nav-menu-button"
@@ -24,5 +18,6 @@ const Navbar = () => {
     />
   </div>
 };
+
 
 export default Navbar;

@@ -25,6 +25,8 @@
       "assets/icons/lock.svg",
       "assets/icons/menu.svg"
     ],
-    "module": []
+    "module": [
+      "components/routes/"
+    ]
   }
 }
