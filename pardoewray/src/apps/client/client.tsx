@@ -125,6 +125,8 @@ const BottomSection = () => {
 
 
 const Client = () => {
+  document.title = 'Pardoe Wray | Client';
+
   return <>
     <TopSection />
     <ContactSection />

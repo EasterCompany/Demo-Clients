@@ -1,5 +1,5 @@
 // Node module imports
-import { Route as NewRoute, Link as NewLink } from "react-router-dom";
+import { Route as NewRoute, Link as NewLink, Switch } from "react-router-dom";
 
 // Global app variables
 import { appName } from '../../../routes';
@@ -14,6 +14,7 @@ export const dp = (path: string) => {
 
 
 export const Route = (props: any) => {
+  if ("any" in props) return <NewRoute path={dp(props.path)} component={props.app} />
   return <NewRoute path={dp(props.path)} exact component={props.app} />
 }
 
@@ -23,3 +24,6 @@ export const Link = (props: any) => {
     {props.name}
   </NewLink>
 }
+
+
+export { Switch }

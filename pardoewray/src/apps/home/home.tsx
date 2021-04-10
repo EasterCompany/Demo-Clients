@@ -125,6 +125,8 @@ recruitment and development of the Equity Partners within Key Selection."
 
 
 const Home = () => {
+  document.title = 'Pardoe Wray | Home';
+
   return <>
     <Introduction />
     <div className="home-buttons">

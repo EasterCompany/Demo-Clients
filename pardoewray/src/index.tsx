@@ -1,7 +1,7 @@
 // NODE MODULE IMPORTS
 import React from 'react';
 import { hydrate, render } from "react-dom";
-import { BrowserRouter as Router, Switch } from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
 
 // LOCAL REQUIREMENTS
 import reportWebVitals from './library/reportWebVitals';
@@ -28,9 +28,7 @@ targetFunc(
       <Navbar />
       <div id="article">
         <div id="article-content">
-          <Switch>
-            <Routes />
-          </Switch>
+          <Routes />
         </div>
         <Footer />
       </div>
