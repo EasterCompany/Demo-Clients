@@ -1,4 +1,24 @@
 
+.navbar-menu-open {
+  width: 38px;
+  height: 38px;
+  display: none;
+  transition: all .8s;
+  margin: 12.5px 5% 0 5%;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z"/></svg>');
+}
+
+.navbar-menu-closed {
+  width: 38px;
+  height: 38px;
+  display: none;
+  transition: all .8s;
+  margin: 12.5px 5% 0 5%;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 17h-12v-2h12v2zm0-4h-12v-2h12v2zm0-4h-12v-2h12v2z"/></svg>');
+}
+
 #nav-header {
   position: fixed;
   display: flex;
@@ -47,4 +67,34 @@ nav a:hover {
   transition: all .3s;
   background-color: rgb(7, 55, 100);
   border-bottom: 5px solid rgb(10, 94, 190);
+}
+
+@media (max-width: 767px) {
+  .navbar-menu-open {
+    display: flex;
+  }
+  .navbar-menu-closed {
+    display: flex;
+  }
+  .navbar-closed {
+    display: none;
+  }
+  .navbar-open {
+    top: 58px;
+    left: 0px;
+    width: 100vw;
+    margin: unset;
+    padding: unset;
+    display: block;
+    position: fixed;
+    overflow-y: auto;
+    background-color: #242048;
+    max-height: calc(100vh - 58px);
+  }
+  nav a {
+    padding: 5% 0 5% 0;
+  }
+  #header {
+    width: 100%;
+  }
 }
