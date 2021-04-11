@@ -27,10 +27,10 @@ const Navbar = () => {
       className="navbar-closed"
       onClick={() => navbarClick(true)}
     >
-      <Link link="" name="Home" />
-      <Link link="client" name="Client" />
-      <Link link="candidate" name="Candidate" />
-      <Link link="jobs" name="Jobs" />
+      <Link to="" name="Home" />
+      <Link to="client" name="Client" />
+      <Link to="candidate" name="Candidate" />
+      <Link to="jobs" name="Jobs" />
     </nav>
     <div
       id="navbar-menu-button"

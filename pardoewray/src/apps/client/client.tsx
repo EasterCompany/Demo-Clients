@@ -1,12 +1,12 @@
 import './client.css';
 import '../home/home.css';
-import tallImg from '../../assets/tall.jpg';
+import tallImg from '../../assets/stats.webp';
 import zelephant from '../../assets/zelephant.webp';
 
 
 const TopSection = () => {
-  return <div className="home-section">
-    <div className="home-left" style={{maxWidth: '70%', paddingLeft: '8%'}}>
+  return <div className="home-section" style={{flexDirection: 'row-reverse'}}>
+    <div className="home-left" style={{maxWidth: 'unset'}}>
       <h2 style={{fontSize: 'calc(36px + 2vmin)', textAlign: 'left'}}> What we do </h2>
       <h3
         style={{fontSize: 'calc(28px + 2vmin)'}}
@@ -18,7 +18,7 @@ const TopSection = () => {
         goodness passion and drive to help you build an incredible business.
       </p>
     </div>
-    <div className="home-right">
+    <div className="home-right" style={{paddingRight: '32px'}}>
       <img
         src={zelephant}
         alt="98% of stats are made up."
@@ -31,21 +31,26 @@ const TopSection = () => {
 
 const ContactSection = () => {
   return <>
-    <div className="home-buttons">
-      <button style={{minWidth: '300px'}}
-        onClick={() => window.open('mailto:info@pardoewray.com')}
-      > info@pardoewray.com </button>
-      <button style={{minWidth: '300px'}}
-        onClick={() => window.location.href = 'tel:0191 933 0028'}
-      > 0191 933 0028 </button>
+    <div className="home-buttons" style={{paddingBottom: 'unset'}}>
+      <a
+        style={{minWidth: '300px', display: 'flex', justifyContent: 'center'}}
+        href='mailto:info@pardoewray.com'
+        > <div id="email-icon" className="btn-icon" /> Email Us </a>
+      <a
+        style={{minWidth: '300px', display: 'flex', justifyContent: 'center'}}
+        href='tel:0191 933 0028'
+        > <div id="phone-icon" className="btn-icon" /> Call Now </a>
     </div>
+    <p style={{textAlign: "center", color: "grey"}}>
+      Contact should be made between 9:00 - 17:00 on Monday to Friday.
+    </p>
   </>
 }
 
 
 const BottomSection = () => {
-  return <div className="home-section" style={{flexDirection: 'row-reverse'}}>
-
+  return <>
+  <div className="home-section" style={{flexDirection: 'row'}}>
     <div className="home-left" style={{maxWidth: 'unset'}}>
 
       <h3 style={{color: '#4472c4', fontWeight: 'bold'}}>
@@ -71,45 +76,7 @@ const BottomSection = () => {
         comes to make that hire, we’re on hand and ready to go.
       </p>
 
-      <h3 style={{color: '#4472c4', fontWeight: 'bold'}}>
-        Our services
-      </h3>
-
-      <h4> Talent management partnership </h4>
-      <p>
-        All the benefits of an internal recruitment function at a fraction of the cost.
-        Reduced fees for multiple hires, we’ll fully integrate with your business to
-        supercharge your growth.
-      </p>
-
-      <h4> Start-up recruitment </h4>
-      <p>
-        We’ll partner with you to build your business from the ground up, allowing you
-        to spread the cost of recruitment while you build profitability. We grow with you.
-      </p>
-
-      <h4> Exec Search </h4>
-      <p>
-        One off search for senior appointments and key hires. Whether CXO level or a
-        critical strategic role, we’ll partner with you to find exceptional candidates who
-        share your values and beliefs.
-      </p>
-
-      <h4> Contingent Recruitment </h4>
-      <p>
-        A more traditional recruitment approach, percentage fee per hire, integrate us with
-        your PSL, still every bit as personal and uniquely tailored to your business needs.
-      </p>
-
-      <h4> Contract Recruitment </h4>
-      <p>
-        We know temporary resource can tip the balance when you need it. We’ll partner with
-        you to find the people you need for as long as you need them. All in line with IR35
-        requirements.
-      </p>
-
     </div>
-
     <div
       className="home-right"
       style={{paddingRight: '2vw'}}
@@ -117,10 +84,63 @@ const BottomSection = () => {
       <img
         src={tallImg}
         alt="pardoewray elephant"
+        style={{padding: '25% 10% 10% 10%', width: '80%'}}
       />
     </div>
-
   </div>
+  <h3 style={{
+    color: '#4472c4', 
+    fontWeight: 'bold', 
+    fontSize: '32px', 
+    textAlign: 'center'
+  }}> Our services </h3>
+  <div
+    className="grid-section"
+  >
+    <div className="grid-item">
+      <h4> Talent management partnership </h4>
+      <p>
+        All the benefits of an internal recruitment function at a fraction of the cost.
+        Reduced fees for multiple hires, we’ll fully integrate with your business to
+        supercharge your growth.
+      </p>
+    </div>
+
+    <div className="grid-item">
+      <h4> Start-up recruitment </h4>
+      <p>
+        We’ll partner with you to build your business from the ground up, allowing you
+        to spread the cost of recruitment while you build profitability. We grow with you.
+      </p>
+    </div>
+
+    <div className="grid-item">
+      <h4> Exec Search </h4>
+      <p>
+        One off search for senior appointments and key hires. Whether CXO level or a
+        critical strategic role, we’ll partner with you to find exceptional candidates who
+        share your values and beliefs.
+      </p>
+    </div>
+
+    <div className="grid-item">
+      <h4> Contingent Recruitment </h4>
+      <p>
+        A more traditional recruitment approach, percentage fee per hire, integrate us with
+        your PSL, still every bit as personal and uniquely tailored to your business needs.
+      </p>
+    </div>
+
+    <div className="grid-item">
+      <h4> Contract Recruitment </h4>
+      <p>
+        We know temporary resource can tip the balance when you need it. We’ll partner with
+        you to find the people you need for as long as you need them. All in line with IR35
+        requirements.
+      </p>
+    </div>
+  </div>
+  </>
 }
 
 
@@ -131,6 +151,7 @@ const Client = () => {
     <TopSection />
     <ContactSection />
     <BottomSection />
+    <ContactSection />
   </>
 }
 

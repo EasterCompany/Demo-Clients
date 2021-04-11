@@ -31,7 +31,7 @@ export const Route = (props: any) => {
 
 
 export const Link = (props: any) => {
-  return <NewLink to={dp(props.link)} onClick={scrollContentToTop}>
+  return <NewLink to={dp(props.to)} onClick={scrollContentToTop}>
     {props.name}
   </NewLink>
 }

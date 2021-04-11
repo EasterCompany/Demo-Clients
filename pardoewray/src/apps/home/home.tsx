@@ -1,3 +1,4 @@
+// Local Components
 import './home.css';
 import leeImg from '../../assets/lee.webp';
 import karlImg from '../../assets/karl.jpeg';
@@ -5,6 +6,9 @@ import philImg from '../../assets/phil.webp';
 import katieImg from '../../assets/katie.webp';
 import nathanImg from '../../assets/nathan.webp';
 import logoImg from '../../assets/zelephant2.webp';
+
+// Shared Components
+import { dp } from '../../shared/components/routes/routes';
 
 
 const Introduction = () => {
@@ -130,9 +134,14 @@ const Home = () => {
   return <>
     <Introduction />
     <div className="home-buttons">
-      <button> Get Me Hired </button>
-      <button> Find Me Candidates </button>
-      <button> View Positions </button>
+      <a
+        style={{minWidth: '300px', display: 'flex', justifyContent: 'center'}}
+        href={dp('candidate')}
+      > <div id="check-icon" className="btn-icon" /> Get Hired </a>
+      <a
+        style={{minWidth: '300px', display: 'flex', justifyContent: 'center'}}
+        href={dp('client')}
+      > <div id="candidates-icon" className="btn-icon" /> Find Candidates </a>
     </div>
     <TheTeam />
   </>
