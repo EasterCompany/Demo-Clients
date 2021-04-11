@@ -4,7 +4,7 @@ import PhoneBtn from '../buttons/phone/phone';
 
 const ContactSection = () => {
   return <>
-    <div className="home-buttons" style={{paddingBottom: 'unset'}}>
+    <div className="home-buttons">
       <EmailBtn />
       <PhoneBtn />
     </div>

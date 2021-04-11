@@ -11,7 +11,7 @@ const HeaderSection = () => {
       <h2 style={{textAlign: 'center'}}> We are Specialists </h2>
       <h3 style={{textAlign: 'center'}}> We understand your industry. </h3>
 
-      <div style={{display: 'grid', placeItems: 'center'}}>
+      <div className="home-buttons" style={{padding: 'unset'}}>
         <EmailBtn />
       </div>
 

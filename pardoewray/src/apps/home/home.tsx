@@ -148,7 +148,7 @@ const Home = () => {
 
   return <>
     <Introduction />
-    <div className="home-buttons">
+    <div id="link-btns" className="home-buttons">
       <Link to="candidate" name={CandidateBtn()} />
       <Link to="client" name={ClientBtn()} />
     </div>
