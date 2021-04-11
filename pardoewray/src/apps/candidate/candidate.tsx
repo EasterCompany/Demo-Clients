@@ -2,6 +2,7 @@
 import './candidate.css';
 import '../home/home.css';
 import zelephant from '../../assets/zelephant.webp';
+import EmailBtn from '../../components/buttons/email/email';
 
 
 const HeaderSection = () => {
@@ -10,11 +11,8 @@ const HeaderSection = () => {
       <h2 style={{textAlign: 'center'}}> We are Specialists </h2>
       <h3 style={{textAlign: 'center'}}> We understand your industry. </h3>
 
-      <div className="home-buttons" style={{padding: 'unset', margin: 'unset'}}>
-        <a
-        style={{minWidth: '300px', display: 'flex', justifyContent: 'center'}}
-        href='mailto:info@pardoewray.com'
-        > <div id="email-icon" className="btn-icon" /> Email Us </a>
+      <div style={{display: 'grid', placeItems: 'center'}}>
+        <EmailBtn />
       </div>
 
       <p style={{textAlign: 'center'}}>

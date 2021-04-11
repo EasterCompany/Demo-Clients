@@ -6,9 +6,10 @@ import philImg from '../../assets/phil.webp';
 import katieImg from '../../assets/katie.webp';
 import nathanImg from '../../assets/nathan.webp';
 import logoImg from '../../assets/zelephant2.webp';
+import ContactSection from '../../components/contact/contact';
 
 // Shared Components
-import { dp } from '../../shared/components/routes/routes';
+import { Link } from '../../shared/components/routes/routes';
 
 
 const Introduction = () => {
@@ -131,19 +132,28 @@ recruitment and development of the Equity Partners within Key Selection."
 const Home = () => {
   document.title = 'Pardoe Wray | Home';
 
+  const CandidateBtn = () => {
+    return <>
+      <div id="check-icon" className="btn-icon" />
+      Get Hired
+    </>
+  }
+
+  const ClientBtn = () => {
+    return <>
+      <div id="candidates-icon" className="btn-icon" />
+      Find Candidates
+    </>
+  }
+
   return <>
     <Introduction />
     <div className="home-buttons">
-      <a
-        style={{minWidth: '300px', display: 'flex', justifyContent: 'center'}}
-        href={dp('candidate')}
-      > <div id="check-icon" className="btn-icon" /> Get Hired </a>
-      <a
-        style={{minWidth: '300px', display: 'flex', justifyContent: 'center'}}
-        href={dp('client')}
-      > <div id="candidates-icon" className="btn-icon" /> Find Candidates </a>
+      <Link to="candidate" name={CandidateBtn()} />
+      <Link to="client" name={ClientBtn()} />
     </div>
     <TheTeam />
+    <ContactSection />
   </>
 }
 

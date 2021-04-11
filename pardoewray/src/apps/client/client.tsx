@@ -2,6 +2,7 @@ import './client.css';
 import '../home/home.css';
 import tallImg from '../../assets/stats.webp';
 import zelephant from '../../assets/zelephant.webp';
+import ContactSection from '../../components/contact/contact';
 
 
 const TopSection = () => {
@@ -26,25 +27,6 @@ const TopSection = () => {
       />
     </div>
   </div>
-}
-
-
-const ContactSection = () => {
-  return <>
-    <div className="home-buttons" style={{paddingBottom: 'unset'}}>
-      <a
-        style={{minWidth: '300px', display: 'flex', justifyContent: 'center'}}
-        href='mailto:info@pardoewray.com'
-        > <div id="email-icon" className="btn-icon" /> Email Us </a>
-      <a
-        style={{minWidth: '300px', display: 'flex', justifyContent: 'center'}}
-        href='tel:0191 933 0028'
-        > <div id="phone-icon" className="btn-icon" /> Call Now </a>
-    </div>
-    <p style={{textAlign: "center", color: "grey"}}>
-      Contact should be made between 9:00 - 17:00 on Monday to Friday.
-    </p>
-  </>
 }
 
 
@@ -89,9 +71,9 @@ const BottomSection = () => {
     </div>
   </div>
   <h3 style={{
-    color: '#4472c4', 
-    fontWeight: 'bold', 
-    fontSize: '32px', 
+    color: '#4472c4',
+    fontWeight: 'bold',
+    fontSize: '32px',
     textAlign: 'center'
   }}> Our services </h3>
   <div

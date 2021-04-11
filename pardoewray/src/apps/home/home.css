@@ -70,15 +70,17 @@
 }
 
 .home-buttons a {
-  display: grid;
+  display: flex;
   cursor: pointer;
   user-select: none;
-  place-items: center;
+  align-items: center;
+  justify-content: center;
 
   width: 33%;
   height: 75px;
   font-size: 24px;
   font-weight: 500;
+  min-width: 300px;
   text-decoration: none;
 
   border: none;
