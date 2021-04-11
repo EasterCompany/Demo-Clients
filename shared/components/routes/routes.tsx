@@ -5,6 +5,17 @@ import { Route as NewRoute, Link as NewLink, Switch } from "react-router-dom";
 import { appName } from '../../../routes';
 
 
+const scrollContentToTop = () => {
+  const content = document.querySelector('#article') as HTMLElement;
+  return content.scrollTop = 0;
+}
+
+
+export const setAppTitle = (title: string) => {
+  return document.title = `${appName} | ${title}`;
+}
+
+
 export const dp = (path: string) => {
   if (window.location.host === "localhost:8000" ||
       window.location.host === "eastercompany.eu.pythonanywhere.com")
@@ -20,7 +31,7 @@ export const Route = (props: any) => {
 
 
 export const Link = (props: any) => {
-  return <NewLink to={dp(props.link)}>
+  return <NewLink to={dp(props.link)} onClick={scrollContentToTop}>
     {props.name}
   </NewLink>
 }

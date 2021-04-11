@@ -3,19 +3,19 @@ import './navbar.css';
 import { Link } from "../../shared/components/routes/routes";
 
 
-const navbarClick = () => {
+const navbarClick = (forceClose=false) => {
   // Fetch objects
   const btn = document.querySelector('#navbar-menu-button') as HTMLElement;
   const menu = document.querySelector('#navbar') as HTMLElement;
   // Toggle menu & button
-  if (btn?.className === 'navbar-menu-closed') {
-    btn.className = 'navbar-menu-open';
-    menu.className = 'navbar-open';
-  }
-  else if (btn?.className) {
+  if (btn?.className === 'navbar-menu-open' || forceClose) {
     btn.className = 'navbar-menu-closed';
     menu.className = 'navbar-closed';
+    return;
   }
+  btn.className = 'navbar-menu-open';
+  menu.className = 'navbar-open';
+  return;
 }
 
 
@@ -25,7 +25,7 @@ const Navbar = () => {
     <nav
       id="navbar"
       className="navbar-closed"
-      onClick={navbarClick}
+      onClick={() => navbarClick(true)}
     >
       <Link link="" name="Home" />
       <Link link="client" name="Client" />
@@ -35,7 +35,7 @@ const Navbar = () => {
     <div
       id="navbar-menu-button"
       className="navbar-menu-closed"
-      onClick={navbarClick}
+      onClick={() => navbarClick(false)}
     />
   </div>
 };

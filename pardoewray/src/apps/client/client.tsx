@@ -6,8 +6,8 @@ import zelephant from '../../assets/zelephant.webp';
 
 const TopSection = () => {
   return <div className="home-section">
-    <div className="home-left" style={{maxWidth: '80%', paddingLeft: '8%'}}>
-      <h2 style={{fontSize: 'calc(36px + 2vmin)'}}> What we do </h2>
+    <div className="home-left" style={{maxWidth: '70%', paddingLeft: '8%'}}>
+      <h2 style={{fontSize: 'calc(36px + 2vmin)', textAlign: 'left'}}> What we do </h2>
       <h3
         style={{fontSize: 'calc(28px + 2vmin)'}}
       > We’re your Talent Management partner. </h3>
