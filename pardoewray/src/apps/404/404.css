@@ -7,7 +7,7 @@
   min-height: calc(78vh - 58px);
 }
 
-#page-not-found h1, h2 {
+#page-not-found h1, #page-not-found h2 {
   text-align: center;
   margin-bottom: 2vh;
 }

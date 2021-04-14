@@ -8,7 +8,10 @@ import ContactSection from '../../components/contact/contact';
 const TopSection = () => {
   return <div className="home-section" style={{flexDirection: 'row-reverse'}}>
     <div className="home-left" style={{maxWidth: 'unset'}}>
-      <h2 style={{fontSize: 'calc(36px + 2vmin)', textAlign: 'left'}}> What we do </h2>
+      <h2
+        id="client-page-header"
+        style={{fontSize: 'calc(36px + 2vmin)'}}
+      > What we do </h2>
       <h3
         style={{fontSize: 'calc(28px + 2vmin)'}}
       > We’re your Talent Management partner. </h3>
@@ -78,6 +81,7 @@ const BottomSection = () => {
   }}> Our services </h3>
   <div
     className="grid-section"
+    style={{maxWidth: '1180px', margin: '0 auto'}}
   >
     <div className="grid-item">
       <h4> Talent management partnership </h4>

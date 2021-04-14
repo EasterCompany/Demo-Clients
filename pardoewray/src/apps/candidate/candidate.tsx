@@ -7,7 +7,7 @@ import EmailBtn from '../../components/buttons/email/email';
 
 const HeaderSection = () => {
   return <div className="home-section">
-    <div className="home-left" style={{margin: '40px 3% 40px 3%'}}>
+    <div className="home-left">
       <h2 style={{textAlign: 'center'}}> We are Specialists </h2>
       <h3 style={{textAlign: 'center'}}> We understand your industry. </h3>
 
