@@ -7,15 +7,16 @@ import ContactSection from '../../components/contact/contact';
 
 const TopSection = () => {
   return <div className="home-section" style={{flexDirection: 'row-reverse'}}>
-    <div className="home-left" style={{maxWidth: 'unset'}}>
+    <div className="home-left" style={{maxWidth: '640px'}}>
       <h2
         id="client-page-header"
-        style={{fontSize: 'calc(36px + 2vmin)'}}
+        style={{textAlign: 'center'}}
       > What we do </h2>
       <h3
-        style={{fontSize: 'calc(28px + 2vmin)'}}
+        style={{textAlign: 'center'}}
       > We’re your Talent Management partner. </h3>
-      <p>
+      <ContactSection />
+      <p style={{textAlign: 'center'}}>
         The idea of ‘partnership’ lies at the core of our business model. Whether you opt for a fully integrated service
         solution from us, or a more traditional contingent recruitment approach, we’ll take accountability for your
         talent needs and help your deliver your business goals. No hard sell, no made up stats, just honest to
@@ -26,7 +27,7 @@ const TopSection = () => {
       <img
         src={zelephant}
         alt="98% of stats are made up."
-        style={{maxWidth: '320px'}}
+        style={{maxWidth: '420px'}}
       />
     </div>
   </div>
@@ -135,7 +136,6 @@ const Client = () => {
 
   return <>
     <TopSection />
-    <ContactSection />
     <BottomSection />
     <ContactSection />
   </>

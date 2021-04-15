@@ -69,7 +69,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding: 10vh 0 0 0;
+  padding: 32px 0 32px 0;
 }
 
 #link-btns {
@@ -176,7 +176,7 @@
   min-width: 250px;
   max-width: 300px;
   text-align: left;
-  padding: 5px 5px 5px 5px;
+  padding: 2vh 5px 2vh 5px;
 }
 
 .grid-item-head {
