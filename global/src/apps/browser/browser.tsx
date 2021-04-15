@@ -36,7 +36,9 @@ const Browser = () => {
         design, develop & deploy a website which advertised their company.
         Future developments will involve a contact & hire app which allows
         clients to inveractively book their appointments and get a qoute
-        our api will automatically log that in Inverair's calender.`}
+        our api will automatically log that in Inverair's calender.
+        view this website live at www.inverair.co.uk
+      `}
     />
     <App
       title='DoNation'
