@@ -37,4 +37,4 @@ export const Link = (props: any) => {
 }
 
 
-export { Switch }
+export { Switch, NewLink }

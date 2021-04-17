@@ -30,6 +30,7 @@ const Navbar = () => {
       <Link to="" name="Home" />
       <Link to="client" name="Client" />
       <Link to="candidate" name="Candidate" />
+      <Link to="jobs" name="Jobs" />
     </nav>
     <div
       id="navbar-menu-button"

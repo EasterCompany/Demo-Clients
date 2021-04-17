@@ -1,6 +1,6 @@
 import './client.css';
 import '../home/home.css';
-import tallImg from '../../assets/stats.webp';
+import statImg from '../../assets/stats.webp';
 import zelephant from '../../assets/zelephant.webp';
 import ContactSection from '../../components/contact/contact';
 
@@ -26,7 +26,7 @@ const TopSection = () => {
     <div className="home-right" style={{paddingRight: '32px'}}>
       <img
         src={zelephant}
-        alt="98% of stats are made up."
+        alt="PardoeWray Zelephant"
         style={{maxWidth: '420px'}}
       />
     </div>
@@ -68,8 +68,8 @@ const BottomSection = () => {
       style={{paddingRight: '2vw'}}
     >
       <img
-        src={tallImg}
-        alt="pardoewray elephant"
+        src={statImg}
+        alt="98% of stats are made up."
         style={{padding: '25% 10% 10% 10%', width: '80%'}}
       />
     </div>
