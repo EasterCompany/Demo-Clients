@@ -1,0 +1,37 @@
+
+#admin-panel {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    place-items: center;
+}
+
+#admin-login {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    max-height: 200px;
+    place-items: center;
+}
+
+#admin-login-input {
+    height: 28px;
+    width: 90%;
+    max-width: 300px;
+}
+
+#job-view-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-job-box {
+    padding: 10px;
+    margin: 10px;
+    width: calc(50% - 50px);
+    min-width: 300px;
+    border: 1px solid black;
+}

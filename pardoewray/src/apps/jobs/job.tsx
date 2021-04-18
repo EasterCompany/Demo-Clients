@@ -13,7 +13,6 @@ const Job = ({ match }: RouteComponentProps<any>) => {
   const [ job, setJob ] = useState({
     uid: String,
     title: String,
-    company: String,
     website: String,
     location: String,
     description: String,
@@ -41,14 +40,13 @@ const Job = ({ match }: RouteComponentProps<any>) => {
       <p> Return </p>
     </NewLink>
     <div id="job-details">
-      <h2> {job.title} </h2>
-      <div id="job-details-h3s">
-        <h3> {job.company} </h3>
-        <h3> {job.location} </h3>
-      </div>
-      <div id="job-details-h4s">
-        <h4> {job.type} </h4>
+      <div id="job-details-head">
+        <h2> {job.title} </h2>
         <h4> {job.date} </h4>
+      </div>
+      <div id="job-details-h3s">
+        <h3> {job.location} </h3>
+        <h3> {job.type} </h3>
       </div>
       <hr />
       <h3> Description </h3>
@@ -56,12 +54,19 @@ const Job = ({ match }: RouteComponentProps<any>) => {
       <h3> Requirements </h3>
       <p> ... </p>
       <div id="job-details-btns">
-        <a id="job-details-webBtn" href={`https://${job.website}/`}>
+        <a
+          id="job-details-webBtn"
+          href={`https://${job.website}/`}
+          target="_blank"
+          rel="noreferrer"
+        >
           View Website
         </a>
-        <a id="job-details-appBtn"href={`https://${job.website}/`}>
+        <button
+          id="job-details-appBtn"
+        >
           Apply Now
-        </a>
+        </button>
       </div>
     </div>
   </>
