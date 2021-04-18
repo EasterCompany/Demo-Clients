@@ -8,7 +8,6 @@ const logout = () => {
     // Remove user cookies
     toRemove.forEach(
         v => {
-            console.log(v);
             document.cookie = `${v}=none;expires=Thu, 01 Jan 1970 00:00:01 GMT`;
         }
     )
