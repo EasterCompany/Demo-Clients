@@ -10,6 +10,12 @@ let secretKey = "";
 let jobBoxCount = 0;
 
 
+const cookie = (key: string) => {
+  const c = document.cookie.match("(^|;)\\s*" + key + "\\s*=\\s*([^;]+)");
+  return c ? c.pop() : "";
+};
+
+
 const getPostId = () => {
   jobBoxCount++;
   return "jobs-browser-post-" + jobBoxCount;
@@ -51,13 +57,14 @@ const CreateJobPost = () => {
     )
     .then(response => response.json())
     .then(data => {
-      if (data.status === 'BAD') return;
+      if (data.status === 'BAD') return alert('Failed to create job post.');
       // UPDATE Job Description
       const postUID = data.uid;
       fetch(serverAdr + `api/admin/jobs/update/desc/` +
       `${encodeURIComponent(postUID)}/${jobInfo.desc}`,
       requestOptions
-      )
+      );
+      window.location.reload();
     });
 
     return console.log(jobInfo);
@@ -201,7 +208,33 @@ const AdminPanel = () => {
   const [login, setLogin] = useState(0);
   const [app, setApp] = useState(<div>Loading...</div>);
 
+  const attemptLogin = () => {
+    // Fetch login credentials
+    fetch(serverAdr + 'api/admin', {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': secretKey
+    }
+    }).then((response) => {response.json().then((data) => {
+        if (data.status === 'OK') {
+          document.cookie = `adminToken=${data.token}`;
+          setLogin(1);
+          setApp(<JobsView />);
+        } else {
+          alert('Login Failed');
+      }})
+    })
+  }
+
   useEffect(() => {
+    const authorize = (event : SyntheticEvent) => {
+      // block from redirecting
+      event.preventDefault();
+      // user input
+      const userInputEl = document.querySelector("#admin-login-input") as HTMLInputElement;
+      secretKey = userInputEl.value;
+      attemptLogin();
+    };
     const Login = () => {
       return <form id="admin-login" onSubmit={authorize}>
         <h1> Admin </h1>
@@ -211,28 +244,6 @@ const AdminPanel = () => {
     }
     if (login === 0) setApp(<Login />)
   }, [login]);
-
-  const authorize = (event : SyntheticEvent) => {
-    // block from redirecting
-    event.preventDefault();
-    // user input
-    const userInputEl = document.querySelector("#admin-login-input") as HTMLInputElement;
-    secretKey = userInputEl.value;
-    // Fetch login credentials
-    fetch(serverAdr + 'api/admin', {
-      headers: {
-        'Content-Type': 'application/json',
-        'Authorization': secretKey
-    }
-    }).then((response) => {response.json().then((data) => {
-        if (data.status === 'OK') {
-          setLogin(1);
-          setApp(<JobsView />);
-        } else {
-          alert('Login Failed');
-      }})
-    })
-  };
 
   return <div id="admin-panel">
     {app}
