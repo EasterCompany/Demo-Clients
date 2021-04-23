@@ -178,3 +178,45 @@
   min-width: 250px;
   max-width: 860px;
 }
+
+#job-description {
+  display: block;
+}
+
+#job-description p {
+  display: flex;
+}
+
+#job-description a {
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+  align-items: left;
+  justify-content: left;
+
+  margin: 0 0 0 0;
+  padding: 0 0 0 0;
+  width: fit-content;
+  min-width: unset;
+  font-weight: unset;
+  height: fit-content;
+  text-decoration: underline;
+  font-size: unset;
+
+  border: none;
+  border-radius: unset;
+  color: rgb(70,140,90);
+}
+
+#job-description a:hover {
+  transform: unset;
+}
+
+#job-description h1,
+#job-description h2,
+#job-description h3,
+#job-description h4,
+#job-description h5,
+#job-description h6 {
+  color: rgba(255, 255, 255, .88);
+}

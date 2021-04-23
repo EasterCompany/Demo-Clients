@@ -7,7 +7,6 @@ import katieImg from '../../assets/katie.webp';
 import nathanImg from '../../assets/nathan.webp';
 import logoImg from '../../assets/zelephant2.webp';
 import ContactSection from '../../components/contact/contact';
-
 // Shared Components
 import { Link } from '../../shared/components/routes/routes';
 
@@ -146,11 +145,17 @@ const Home = () => {
     </>
   }
 
+  const BrowserBtn = () => <>
+    <div id="search-icon" className="btn-icon" />
+    View Jobs
+  </>
+
   return <>
     <Introduction />
     <div id="link-btns" className="home-buttons">
       <Link to="candidate" name={CandidateBtn()} />
       <Link to="client" name={ClientBtn()} />
+      <Link to="jobs" name={BrowserBtn()} />
     </div>
     <TheTeam />
     <ContactSection />

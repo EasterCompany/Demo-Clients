@@ -1,4 +1,5 @@
 // Node modules imports
+import Markdown from 'react-markdown';
 import { useEffect, useState } from 'react';
 import { RouteComponentProps } from 'react-router';
 // Local imports
@@ -8,6 +9,30 @@ import serverAdr from "../../shared/library/server/address";
 import { dp, NewLink } from '../../shared/components/routes/routes';
 
 
+const WebsiteButton = (props: any) => {
+  if (props.website === '0') return <></>
+  return <a
+    id="job-details-webBtn"
+    href={`https://${props.website}/`}
+    target="_blank"
+    rel="noreferrer"
+  >
+    View Website
+  </a>
+}
+
+
+const RequirementsSection = (props: {reqs: Array<string>}) => {
+  if (props.reqs.length === 0) return <></>
+  return <>
+  <h3> Requirements </h3>
+    <ul>
+      {props.reqs.map(req => <li>{req}</li>)}
+    </ul>
+  </>
+}
+
+
 const Job = ({ match }: RouteComponentProps<any>) => {
 
   const [ job, setJob ] = useState({
@@ -15,9 +40,10 @@ const Job = ({ match }: RouteComponentProps<any>) => {
     title: String,
     website: String,
     location: String,
-    description: String,
+    description: "",
     type: String,
     date: String,
+    reqs: []
   });
 
   useEffect(() => {
@@ -50,18 +76,12 @@ const Job = ({ match }: RouteComponentProps<any>) => {
       </div>
       <hr />
       <h3> Description </h3>
-      <p>{job.description}</p>
-      <h3> Requirements </h3>
-      <p> ... </p>
+      <div id="job-description" className="job-description">
+        <Markdown children={job.description} />
+      </div>
+      <RequirementsSection reqs={job.reqs}/>
       <div id="job-details-btns">
-        <a
-          id="job-details-webBtn"
-          href={`https://${job.website}/`}
-          target="_blank"
-          rel="noreferrer"
-        >
-          View Website
-        </a>
+        <WebsiteButton website={job.website} />
         <button
           id="job-details-appBtn"
         >

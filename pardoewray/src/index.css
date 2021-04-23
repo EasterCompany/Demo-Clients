@@ -31,8 +31,8 @@ code {
   z-index: 0;
   top: 58px;
   left: 0;
-  height: calc(100vh - 58px);
   width: 100vw;
+  height: calc(100vh - 58px);
   overflow-y: auto;
   overflow-x: hidden;
   scrollbar-color: #4472c4 #222;
@@ -47,6 +47,7 @@ code {
   color: white;
   margin: 0 10% 0 10%;
   padding-bottom: 80px;
+  min-height: calc(100vh - 58px);
 }
 
 @media (max-width: 999px) {

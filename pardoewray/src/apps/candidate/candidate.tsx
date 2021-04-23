@@ -3,6 +3,8 @@ import './candidate.css';
 import '../home/home.css';
 import zelephant from '../../assets/zelephant.webp';
 import EmailBtn from '../../components/buttons/email/email';
+import BrowserBtn from '../../components/buttons/browser/browser';
+import React from 'react';
 
 
 const HeaderSection = () => {
@@ -11,7 +13,7 @@ const HeaderSection = () => {
       <h2 style={{textAlign: 'center'}}> We are Specialists </h2>
       <h3 style={{textAlign: 'center'}}> We understand your industry. </h3>
 
-      <div className="home-buttons" style={{padding: 'unset'}}>
+      <div className="home-buttons">
         <EmailBtn />
       </div>
 
@@ -92,6 +94,10 @@ const Candidate = () => {
   return <>
     <HeaderSection />
     <CVSection />
+    <div className="home-buttons">
+      <BrowserBtn />
+      <EmailBtn />
+    </div>
   </>
 }
 

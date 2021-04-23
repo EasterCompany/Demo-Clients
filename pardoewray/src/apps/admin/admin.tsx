@@ -35,8 +35,8 @@ const CreateJobPost = () => {
     const jobReqsEl = document.querySelector("#new-job-reqs") as HTMLInputElement;
     const jobInfo = {
       title: encodeURIComponent(jobTitleEl.value),
-      company: encodeURIComponent(jobCompyEl.value),
-      website: encodeURIComponent(jobWebsiteEl.value),
+      company: encodeURIComponent(jobCompyEl.value) || "0",
+      website: encodeURIComponent(jobWebsiteEl.value) || "0",
       location: encodeURIComponent(jobLocationEl.value),
       type: encodeURIComponent(jobTypeEl.value),
       desc: encodeURIComponent(jobDescEl.value),
@@ -59,15 +59,19 @@ const CreateJobPost = () => {
     .then(data => {
       if (data.status === 'BAD') return alert('Failed to create job post.');
       // UPDATE Job Description
-      const postUID = data.uid;
-      fetch(serverAdr + `api/admin/jobs/update/desc/` +
-      `${encodeURIComponent(postUID)}/${jobInfo.desc}`,
-      requestOptions
+      const postUID = encodeURIComponent(data.uid);
+      fetch(
+        serverAdr + `api/admin/jobs/update/desc/` +
+        `${postUID}/${jobInfo.desc}`,
+        requestOptions
+      );
+      fetch(
+        serverAdr + `api/admin/jobs/update/reqs/` +
+        `${postUID}/${jobInfo.reqs}`,
+        requestOptions
       );
       window.location.reload();
     });
-
-    return console.log(jobInfo);
   }
 
   return <>
