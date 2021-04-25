@@ -33,6 +33,7 @@
 }
 
 #header {
+  cursor: pointer;
   width: 20vw;
   margin: .5vh 0 .5vh 0;
   filter: drop-shadow(1px 1px 1px black);

@@ -220,3 +220,132 @@
 #job-description h6 {
   color: rgba(255, 255, 255, .88);
 }
+
+.job-apply-model-container {
+  display: none;
+  position: fixed;
+  z-index: 100;
+  top: 58px;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh - 58px);
+  background-color: rgba(0,0,0,.5);
+}
+
+.job-apply-model {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 101;
+  width: 100%;
+  max-width: 600px;
+  height: 96%;
+  max-height: 750px;
+  margin: auto auto;
+  border-radius: 10px;
+  padding: 12px 5vw 12px 5vw;
+  background-position: -500px -500px;
+  background-image: radial-gradient(#273483, #131a42);
+  background-color: #202c6e;
+}
+
+.job-apply-model h2 {
+  width: 100%;
+  text-align: center;
+}
+
+.job-apply-form {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin: auto auto;
+  overflow-y: auto;
+  padding: 28px 0 48px 0;
+}
+
+.job-apply-form input {
+  min-height: 32px;
+  width: 250px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 14px;
+  padding: 0 8px 0 8px;
+  margin: 8px auto;
+
+  border-bottom: 5px solid rgb(85, 145, 126);
+}
+
+.job-apply-form label {
+  font-weight: bold;
+  min-height: 28px;
+  width: 100%;
+  text-align: center;
+  margin: 24px auto 0 auto;
+}
+
+.job-apply-form button {
+  font-weight: bold;
+  color: white;
+  outline: none;
+  min-height: 42px;
+  width: 250px;
+  border: 1px solid grey;
+  border-radius: 50px;
+  margin: 5vh auto 0 auto;
+  background-color: rgb(85, 145, 126);
+}
+
+.job-apply-form button:hover {
+  border: 1px solid white;
+  transform: scale(1.05);
+}
+
+.job-apply-close-btn {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  width: calc(32px + 1vmin);
+  height: calc(32px + 1vmin);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.151 17.943l-4.143-4.102-4.117 4.159-1.833-1.833 4.104-4.157-4.162-4.119 1.833-1.833 4.155 4.102 4.106-4.16 1.849 1.849-4.1 4.141 4.157 4.104-1.849 1.849z"/></svg>');
+}
+
+.job-apply-close-btn:hover {
+  transform: scale(1.05);
+}
+
+.loading-spinner {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M13.75 22c0 .966-.783 1.75-1.75 1.75s-1.75-.784-1.75-1.75.783-1.75 1.75-1.75 1.75.784 1.75 1.75zm-1.75-22c-1.104 0-2 .896-2 2s.896 2 2 2 2-.896 2-2-.896-2-2-2zm10 10.75c.689 0 1.249.561 1.249 1.25 0 .69-.56 1.25-1.249 1.25-.69 0-1.249-.559-1.249-1.25 0-.689.559-1.25 1.249-1.25zm-22 1.25c0 1.105.896 2 2 2s2-.895 2-2c0-1.104-.896-2-2-2s-2 .896-2 2zm19-8c.551 0 1 .449 1 1 0 .553-.449 1.002-1 1-.551 0-1-.447-1-.998 0-.553.449-1.002 1-1.002zm0 13.5c.828 0 1.5.672 1.5 1.5s-.672 1.501-1.502 1.5c-.826 0-1.498-.671-1.498-1.499 0-.829.672-1.501 1.5-1.501zm-14-14.5c1.104 0 2 .896 2 2s-.896 2-2.001 2c-1.103 0-1.999-.895-1.999-2s.896-2 2-2zm0 14c1.104 0 2 .896 2 2s-.896 2-2.001 2c-1.103 0-1.999-.895-1.999-2s.896-2 2-2z"/></svg>');
+}
+
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}
+
+.form-success {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 20px auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="rgb(85, 145, 126)" viewBox="0 0 24 24"><path d="M21.856 10.303c.086.554.144 1.118.144 1.697 0 6.075-4.925 11-11 11s-11-4.925-11-11 4.925-11 11-11c2.347 0 4.518.741 6.304 1.993l-1.422 1.457c-1.408-.913-3.082-1.45-4.882-1.45-4.962 0-9 4.038-9 9s4.038 9 9 9c4.894 0 8.879-3.928 8.99-8.795l1.866-1.902zm-.952-8.136l-9.404 9.639-3.843-3.614-3.095 3.098 6.938 6.71 12.5-12.737-3.096-3.096z"/></svg>');
+}

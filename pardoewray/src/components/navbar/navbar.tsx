@@ -1,6 +1,6 @@
 // Component imports
 import './navbar.css';
-import { Link } from "../../shared/components/routes/routes";
+import { Link, dp } from "../../shared/components/routes/routes";
 
 
 const navbarClick = (forceClose=false) => {
@@ -21,7 +21,7 @@ const navbarClick = (forceClose=false) => {
 
 const Navbar = () => {
   return <div id="nav-header">
-    <div id="header" />
+    <div id="header" onClick={() => window.location.href = dp('')} />
     <nav
       id="navbar"
       className="navbar-closed"
