@@ -27,7 +27,7 @@ const Navbar = () => {
       className="navbar-closed"
       onClick={() => navbarClick(true)}
     >
-      <Link to="" name="Home" />
+      <Link to="news" name="News" />
       <Link to="client" name="Client" />
       <Link to="candidate" name="Candidate" />
       <Link to="jobs" name="Jobs" />
