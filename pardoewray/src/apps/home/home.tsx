@@ -14,7 +14,7 @@ import { Link } from '../../shared/components/routes/routes';
 
 const Introduction = () => {
   return <div className="home-section">
-    <div className="home-left" style={{margin: '0 auto'}}>
+    <div className="home-left" style={{margin: '0 auto', maxWidth: '750px'}}>
       <div className="home-title">
         <h2> Hello. </h2>
         <img src={logoImg} alt="logo" />
@@ -41,7 +41,7 @@ const Introduction = () => {
         you need to build brilliant teams.
       </p>
     </div>
-    <div className="home-right">
+    <div className="home-right" style={{width: '33%', margin: '0 auto'}}>
       <img src={logoImg} alt="logo" />
     </div>
   </div>
@@ -155,6 +155,14 @@ const Home = () => {
   </>
 
   return <>
+    <div id="home-header-img" />
+    <h1 style={{
+      margin: '0 0 5vh 0',
+      fontSize: '18px',
+      textAlign: 'center',
+      fontFamily: 'Ubuntu',
+      width: '100%',
+    }}> Your Talent Management Partner </h1>
     <Introduction />
     <div id="link-btns" className="home-buttons">
       <Link to="candidate" name={CandidateBtn()} />
