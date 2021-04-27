@@ -7,6 +7,7 @@ import katieImg from '../../assets/katie.webp';
 import nathanImg from '../../assets/nathan.webp';
 import logoImg from '../../assets/zelephant2.webp';
 import ContactSection from '../../components/contact/contact';
+import TestimonialSection from '../../components/testimonial/section';
 // Shared Components
 import { Link } from '../../shared/components/routes/routes';
 
@@ -159,6 +160,7 @@ const Home = () => {
     </div>
     <TheTeam />
     <ContactSection />
+    <TestimonialSection />
   </>
 }
 

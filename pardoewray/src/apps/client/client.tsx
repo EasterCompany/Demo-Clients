@@ -82,7 +82,10 @@ const BottomSection = () => {
   }}> Our services </h3>
   <div
     className="grid-section"
-    style={{maxWidth: '1180px', margin: '0 auto'}}
+    style={{
+      maxWidth: '1180px',
+      margin: '0 auto',
+    }}
   >
     <div className="grid-item">
       <h4> Talent management partnership </h4>
