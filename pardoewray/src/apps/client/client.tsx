@@ -3,6 +3,8 @@ import '../home/home.css';
 import statImg from '../../assets/stats.webp';
 import zelephant from '../../assets/zelephant.webp';
 import ContactSection from '../../components/contact/contact';
+import TestimonialSection from '../../components/testimonial/section';
+import React from 'react';
 
 
 const TopSection = () => {
@@ -141,6 +143,7 @@ const Client = () => {
     <TopSection />
     <BottomSection />
     <ContactSection />
+    <TestimonialSection />
   </>
 }
 

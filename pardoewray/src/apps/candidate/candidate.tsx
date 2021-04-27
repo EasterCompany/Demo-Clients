@@ -4,7 +4,7 @@ import '../home/home.css';
 import zelephant from '../../assets/zelephant.webp';
 import EmailBtn from '../../components/buttons/email/email';
 import BrowserBtn from '../../components/buttons/browser/browser';
-import React from 'react';
+import TestimonialSection from '../../components/testimonial/section';
 
 
 const HeaderSection = () => {
@@ -98,6 +98,7 @@ const Candidate = () => {
       <BrowserBtn />
       <EmailBtn />
     </div>
+    <TestimonialSection />
   </>
 }
 

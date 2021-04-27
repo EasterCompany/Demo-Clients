@@ -49,15 +49,17 @@ const Introduction = () => {
 
 
 const TeamMember = (props: any) => {
-  return <div className="team-member-container">
-    <img src={props.img} alt={props.name} />
-    <div className="team-member-info-container">
-      <div className="team-member-info">
-        <p className="team-member-name"> {props.name} </p>
-        <p className="team-member-title"> {props.title} </p>
-      </div>
-      <div className="team-member-bio">
-        <p> {props.bio} </p>
+  return <div className="grid-item" style={{width: '100%', maxWidth: '600px'}}>
+    <div className="team-member-container">
+      <img src={props.img} alt={props.name} />
+      <div className="team-member-info-container">
+        <div className="team-member-info">
+          <p className="team-member-name"> {props.name} </p>
+          <p className="team-member-title"> {props.title} </p>
+        </div>
+        <div className="team-member-bio">
+          <p> {props.bio} </p>
+        </div>
       </div>
     </div>
   </div>
@@ -65,9 +67,9 @@ const TeamMember = (props: any) => {
 
 
 const TheTeam = () => {
-  return <div className="home-section" style={{flexDirection: 'row-reverse'}}>
+  return <div className="home-section" style={{flexDirection: 'column-reverse'}}>
     <div className="home-left" style={{maxWidth: 'unset'}}>
-
+    <div className="grid-section">
       <TeamMember
         img={nathanImg}
         name="Nathan Pardoe"
@@ -122,8 +124,9 @@ recruitment and development of the Equity Partners within Key Selection."
       />
 
     </div>
-    <div className="home-right">
-      <h2 style={{textAlign:'center', marginTop:'-120px'}}> Meet <br/> The <br/> Team </h2>
+    </div>
+    <div className="home-right" style={{width: '100%'}}>
+      <h2 style={{textAlign:'center'}}> Meet The Team </h2>
     </div>
   </div>
 }
