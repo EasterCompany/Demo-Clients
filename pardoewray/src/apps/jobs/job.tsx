@@ -170,7 +170,6 @@ const Job = ({ match }: RouteComponentProps<any>) => {
       </div>
     </div>
   </>
-
 }
 
 

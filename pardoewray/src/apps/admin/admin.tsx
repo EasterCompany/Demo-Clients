@@ -9,6 +9,20 @@ import serverAdr from "../../shared/library/server/address";
 let secretKey = "";
 let jobBoxCount = 0;
 
+interface jobData {
+  title: string;
+  company: string;
+  location: string;
+  type: string;
+  date: string;
+}
+
+interface postData {
+  title: string;
+  content: string;
+  date: string;
+}
+
 
 const cookie = (key: string) => {
   const c = document.cookie.match("(^|;)\\s*" + key + "\\s*=\\s*([^;]+)");
@@ -128,6 +142,52 @@ const CreateJobPost = () => {
 }
 
 
+const CreateNewsPost = () => {
+
+  const createPost = (event: SyntheticEvent) => {
+    event.preventDefault();
+    const titleEl = document.querySelector("#new-post-title") as HTMLInputElement;
+    const contentEl = document.querySelector("#new-post-cont") as HTMLInputElement;
+    const postInfo = {
+      title: encodeURIComponent(titleEl.value),
+      content: encodeURIComponent(contentEl.value)
+    }
+
+    const requestOptions = {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': secretKey
+      }
+    };
+
+    fetch(`${serverAdr}api/admin/news/create/` +
+    `${postInfo.title}/${postInfo.content}`, requestOptions
+    )
+    .then(response => response.json())
+    .then(data => {
+      if (data.status === 'BAD') return alert('Failed to create post.');
+      window.location.reload();
+    });
+  }
+
+  return <>
+    <h2> Make News Post </h2>
+    <form id="create-job-post" onSubmit={createPost}>
+      <div className="create-job-post-option">
+        <h3> Post Title </h3>
+        <input type="text" id="new-post-title" placeholder="Post Title" />
+      </div>
+      <div className="create-job-post-option">
+        <h3> Description </h3>
+        <textarea id="new-post-cont" placeholder="Enter news content here..." />
+      </div>
+      <button type="submit"> Submit </button>
+    </form>
+  </>
+}
+
+
 const JobsView = () => {
   const [app, setApp] = useState(<></>);
 
@@ -159,8 +219,24 @@ const JobsView = () => {
       </div>
     }
 
-    const ListJobs = (data: Array<any>) => <div id="job-view-container">
-      {data.map(item => <Job job={item}/>)}
+    const News = (props: any) => <div
+      className="admin-news-box"
+    >
+      <h2> {props.post.title} </h2>
+    </div>
+
+    const ListPosts = (props: {jobs: Array<jobData>, post: Array<postData>}) =>
+    <div id="post-container">
+      <h1> Job Browser </h1>
+      <hr />
+      <div id="job-view-container">
+        {props.jobs.map(item => <Job job={item}/>)}
+      </div>
+      <h1> News Letters </h1>
+      <hr />
+      <div id="news-view-container">
+        {props.post.map(item => <News post={item}/>)}
+      </div>
     </div>
 
     const requestOptions = {
@@ -173,8 +249,16 @@ const JobsView = () => {
 
     fetch(`${serverAdr}api/admin/jobs`, requestOptions)
       .then(response => response.json())
-      .then(d => setApp(ListJobs(d.data)));
-    }, []);
+      .then(
+        d => {
+          fetch(`${serverAdr}api/news`, requestOptions)
+          .then(response => response.json())
+          .then(p => setApp(ListPosts({
+            jobs: d.data,
+            post: p.posts
+          })));
+      });
+  }, []);
 
   const deleteJob = (jobUID: string, postID: string) => {
     const requestOptions = {
@@ -198,7 +282,10 @@ const JobsView = () => {
     > Home </button>
     <button
       onClick={() => setApp(<CreateJobPost/>)}
-    > New Job Post </button>
+    > Create Job </button>
+    <button
+      onClick={() => setApp(<CreateNewsPost/>)}
+    > News Post </button>
   </div>
 
   return <>

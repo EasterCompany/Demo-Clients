@@ -1,6 +1,7 @@
 // Local applications
 import Home from './apps/home/home';
 import News from './apps/news/news';
+import Post from './apps/news/post';
 import Job from './apps/jobs/job';
 import Jobs from './apps/jobs/jobs';
 import Client from './apps/client/client';
@@ -28,6 +29,12 @@ const Routes = () => {
       Route({
         path: 'news',
         app: News
+      })
+    }
+    { // Job View
+      Route({
+        path: 'news/:id',
+        app: Post
       })
     }
     { // Jobs Browser

@@ -1,4 +1,9 @@
 
+#post-container h1 {
+    margin: 64px 0 0 10vw;
+    color: rgba(0, 0, 0, 0.5);
+}
+
 #admin-panel {
     display: block;
     width: 100vw;
@@ -48,6 +53,23 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
+}
+
+#news-view-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-news-box {
+    padding: 10px;
+    margin: 10px;
+    width: calc(50% - 50px);
+    min-width: 320px;
+    max-width: 800px;
+    border: 1px solid black;
 }
 
 .admin-job-box {
