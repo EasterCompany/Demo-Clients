@@ -32,17 +32,15 @@ if (window.location.href.endsWith("eastercompany/admin-panel")) {
   )
 } else {
   targetFunc(
-    <React.StrictMode>
-      <Router>
-        <Navbar />
-        <div id="article">
-          <div id="article-content">
+    <Router>
+      <Navbar />
+      <div id="article">
+        <div id="article-content">
             <Routes />
-          </div>
-          <Footer />
         </div>
-      </Router>
-    </React.StrictMode>,
+        <Footer />
+      </div>
+    </Router>,
     document.getElementById('root')
   )
 }
