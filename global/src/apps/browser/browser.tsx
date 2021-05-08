@@ -5,9 +5,7 @@ import App from '../../components/preview/preview';
 // Asset Imports
 import echatLogo from '../../assets/images/echat.jpg';
 import toolsLogo from '../../assets/images/tools.jpg';
-import secleaLogo from '../../assets/images/seclea.jpg';
 import journalLogo from '../../assets/images/journal.jpg';
-import donationLogo from '../../assets/images/donation.jpg';
 import inverairLogo from '../../assets/images/inverair.jpg';
 import ecuisineLogo from '../../assets/images/ecuisine.jpg';
 import forensicLogo from '../../assets/images/forensic.jpg';
@@ -16,17 +14,6 @@ import pardoewrayLogo from '../../assets/images/pardoewray.jpg';
 
 const Browser = () => {
   return <div id='browser'>
-    <App
-      title='Seclea'
-      image={secleaLogo}
-      link='seclea.app'
-      source='https://github.com/EasterCompany/Demo-Clients/tree/main/seclea'
-      description={`Seclea tasked us with developing a technical test for a
-        user browser in React which could pull random user data from an api
-        and then display that data within a container. It was also requested user
-        images should be able to be viewed as a thumbnail by default and fullscreen
-        when after clicking on them - similar to facebook profile images.`}
-    />
     <App
       title='Inverair'
       image={inverairLogo}
@@ -39,18 +26,6 @@ const Browser = () => {
         our api will automatically log that in Inverair's calender.
         view this website live at www.inverair.co.uk
       `}
-    />
-    <App
-      title='DoNation'
-      image={donationLogo}
-      link='donation.app'
-      source='https://github.com/oceaster/DoNation-App'
-      description={`DoNation tasked us with providing a technical test for their
-      pledge app, which allows a user to make a commitment towards how they will
-      make a change to their life that benefits the environment. Our api provides
-      details on how much Co2, waste, water..etc will be saved if they commit to
-      their pledge and also how much of the above variables have been saved by
-      all users on their platform.`}
     />
     <App
       title='PardoeWray'
