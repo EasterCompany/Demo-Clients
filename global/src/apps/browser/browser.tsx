@@ -47,35 +47,6 @@ const Browser = () => {
         repositories and we highly encourage everyone using Django & React to use
         Overlord-Tools as their encompassing fullstack framework.`}
     />
-    <App
-      title='eChat'
-      image={echatLogo}
-      link="echat.app"
-      source="https://github.com/EasterCompany/Demo-Clients/tree/main/chat"
-      description={`eChat is an end-to-end encrypted messaging application which uses
-        your Easter Company profile and integrates with all other applications on our
-        platform. eChat aims to have a similar interface to messenger on the web and to
-        function similar to snapchat on mobile. It is a standalone application which
-        was originally scoped to be a feature of the Journal app.`}
-    />
-    <App
-      title='Journal'
-      image={journalLogo}
-      description={`The Journal is currently in early stage development and private.
-        check back later for more details.`}
-    />
-    <App
-      title='eCuisine'
-      image={ecuisineLogo}
-      description={`eCuisine is currently in early stage development and private.
-        check back later for more details.`}
-    />
-    <App
-      title='Forensic'
-      image={forensicLogo}
-      description={`Forensic is currently in early stage development and private.
-        check back later for more details.`}
-    />
   </div>
 }
 
