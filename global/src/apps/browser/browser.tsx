@@ -30,7 +30,7 @@ const Browser = () => {
     <App
       title='PardoeWray'
       image={pardoewrayLogo}
-      link='pardoewray'
+      link='pardoewray.app'
       description={`Pardoewray talent management agency has tasked us with the development
         of a new web application for their customers & clients to utilize in finding,
         sharing and advertising applications while also providing a great advertising

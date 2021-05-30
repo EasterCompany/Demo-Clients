@@ -15,7 +15,8 @@
       "components/user-btns/",
       "components/loading/",
       "library/server/",
-      "library/user/"
+      "library/user/",
+      "components/routes/"
     ]
   },
   "pardoewray": {
