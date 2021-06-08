@@ -1,6 +1,0 @@
-[submodule "pardoewray"]
-	path = pardoewray
-	url = git@github.com:EasterCompany/Pardoewray-Client.git
-[submodule "eastercompany"]
-	path = eastercompany
-	url = git@github.com:EasterCompany/EasterCompany-Client.git
